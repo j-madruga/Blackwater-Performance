@@ -1,0 +1,68 @@
+// Estilo de cards de presentación
+.presentation--display {
+    @extend %displayFlexColumn;
+    justify-content: center;
+}
+.presentation__article {
+    @extend %articleGridLayout;
+    margin: 4% 8%;
+    grid-column-gap: 2%;
+    img {
+        @include img(30rem, 17rem, cover, 15px);
+    }
+    h3 {
+        @include textStyle($ffMonserrat, 2.1rem, normal, 800, $darkBlue);
+        margin: 1% 0% 3% 0%;
+    }
+    p {
+        @include textStyle($ffMonserrat, 1.5rem, normal, 500, $darkGrey);
+        letter-spacing: .08em;
+        text-align: justify;
+    }
+}
+.presentation__article--backward {
+    margin: 4% 8%;
+    display: grid;
+    grid-template-columns: auto 30rem;
+    grid-template-rows: max-content auto;
+    grid-template-areas: 
+    "title img"
+    "textCard img";
+    grid-column-gap: 2%;
+}
+
+// Estilo seccion de productos
+.product--display {
+    @extend %displayFlexColumn;
+    justify-content: center;
+    @extend %darkContainer;
+    padding-bottom: 3em;
+    margin: 0% 6% 5% 6%;
+    h3 {
+        @include textStyle($ffMonserrat, 3rem, normal, 900, white);
+        text-align: center;
+        margin: 0% 0% 5% 0%;
+        padding: .5em;
+        background-color: $lightBlue;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
+// cards de los productos
+.product__article {
+    @extend %articleGridLayout;
+    @extend %articleStyle
+}
+.product__article--bg {
+    background-color: $smokeyWhite;
+}
+.product__article--animation {
+    @extend %articleAnimation;
+}
+.product__article--animation:hover {
+    transform: scale(1.03);
+    h4 {
+        color: whitesmoke;
+        @extend %gradientHover;
+    }
+}

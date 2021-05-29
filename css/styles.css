@@ -1,0 +1,579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.presentation__article, .product__article, .cardQuienes {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-rows: max-content auto;
+  grid-template-areas: "img title" "img textCard"; }
+  .presentation__article img, .product__article img, .cardQuienes img {
+    grid-area: img; }
+  .presentation__article h3, .product__article h3, .cardQuienes h3 {
+    grid-area: title; }
+  .presentation__article p, .product__article p, .cardQuienes p {
+    grid-area: textCard; }
+
+.product__article, .cardQuienes {
+  margin: 1% 4%;
+  border-radius: 15px; }
+  .product__article img, .cardQuienes img {
+    width: 30rem;
+    height: 17rem;
+    object-fit: cover;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    grid-area: img; }
+  .product__article h4, .cardQuienes h4 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #2e3035;
+    padding: .4em;
+    padding-left: 2rem;
+    margin-bottom: .8em;
+    grid-area: title;
+    background-color: #19d3da;
+    border-top-right-radius: 15px; }
+  .product__article p, .cardQuienes p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #373a40;
+    letter-spacing: .05em;
+    text-align: justify;
+    grid-area: textCard;
+    padding-left: 2rem;
+    padding-right: 2em; }
+
+.productContainer__article, .articleCard {
+  background-color: whitesmoke;
+  border-radius: 15px; }
+  .productContainer__article img, .articleCard img {
+    width: auto;
+    height: 17rem;
+    object-fit: cover;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .productContainer__article h4, .articleCard h4 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #373a40;
+    background-color: #19d3da;
+    padding: .5em 1.25em; }
+  .productContainer__article ul, .articleCard ul {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: .05em;
+    text-align: justify;
+    margin: .8em 1.4em .8em .4em; }
+  .productContainer__article p, .articleCard p {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: .05em;
+    text-align: justify;
+    width: 30rem;
+    padding: 0em 2em; }
+
+.form--animation, .product__article--animation, .productContainer__article--animation, .articleCard--animation, .blogLinkContainer {
+  transition: all 0.5s; }
+
+.form--animation:hover, .product__article--animation:hover, .productContainer__article--animation:hover, .articleCard--animation:hover, .blogLinkContainer:hover {
+  transform: scale(1.06); }
+
+.form--animation:hover, .product__article--animation:hover h4 {
+  background: #031b21;
+  background: linear-gradient(42deg, #031b21 0%, #0aa0c5 47%, #19d3da 100%); }
+
+.form--bgDark, .product--display, .productContainer, .blogLinkContainer, .formContainer {
+  background-color: #373a40;
+  box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
+  border-radius: 15px; }
+
+.articleCard {
+  background-color: whitesmoke;
+  box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
+  border-radius: 15px; }
+
+.form--flexColumn, .presentation--display, .product--display, .productContainer, .productContainer__article, .articleContainer, .articleCard, .blogLinkContainer, .formContainer, .formContainer form {
+  display: flex;
+  flex-direction: column; }
+
+.form--flexRow, .form--bgLight, .form--bgLight div, .cardContainer--flex, .formContainer form div {
+  display: flex;
+  flex-flow: row wrap; }
+
+.form .form__submit, .formProduct .form__submit, .form__submit, .articleCard a {
+  font-family: "Monserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
+  color: whitesmoke;
+  width: auto; }
+
+.nav__logo--size {
+  height: 70px; }
+
+.nav--background {
+  background-color: #0aa0c5; }
+
+.nav--width {
+  width: 95%; }
+
+.nav__links a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 800;
+  color: #373a40; }
+
+.banner__fondo--img {
+  background-image: url(/img/box-cross-banner.jpg);
+  background-size: cover;
+  background-position: center center;
+  margin-top: 95px; }
+
+.banner__titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 390px;
+  margin-bottom: 4%;
+  background: rgba(0, 0, 0, 0.45); }
+  .banner__titulo h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 160px;
+    font-style: italic;
+    font-weight: 800;
+    color: #0aa0c5;
+    margin-bottom: -2%; }
+
+.banner__subtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 4.5rem;
+  font-style: initial;
+  font-weight: 900;
+  color: #0aa0c5;
+  letter-spacing: .6em;
+  padding-bottom: 0.5rem;
+  margin-right: -.6em; }
+
+.banner__subtitle--page {
+  font-family: "Lato", sans-serif;
+  font-size: 3.5rem;
+  font-style: initial;
+  font-weight: 900;
+  color: #19d3da;
+  display: inline;
+  letter-spacing: .3em;
+  width: 18em;
+  align-self: center;
+  padding-right: -.3em;
+  margin-top: -.6em;
+  background: rgba(0, 0, 0, 0.75); }
+
+.form--flexRow {
+  justify-content: center;
+  align-items: center; }
+
+.form--flexColumn {
+  justify-content: flex;
+  align-items: center; }
+
+.form, .formProduct {
+  margin: 3.5% 10%; }
+  .form h4, .formProduct h4 {
+    display: inline-block;
+    padding: .7em;
+    margin: 0%;
+    font-family: "Monserrat", sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 900;
+    color: #19d3da; }
+  .form input, .formProduct input {
+    padding: 7px;
+    border-radius: 10px;
+    margin: 4px;
+    width: 300px;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #373a40;
+    letter-spacing: 2px;
+    border: none; }
+  .form .form__submit--blue, .formProduct .form__submit--blue {
+    background-color: #19d3da; }
+
+.form--bgLight {
+  justify-content: center;
+  background-color: #19d3da;
+  border-radius: 15px; }
+  .form--bgLight h4 {
+    color: #373a40;
+    margin: .5em; }
+  .form--bgLight form {
+    width: 78%;
+    margin-bottom: 1em; }
+  .form--bgLight div {
+    justify-content: space-around;
+    width: 90%;
+    margin-bottom: 1em; }
+  .form--bgLight label {
+    padding: 7px;
+    margin: 4px;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #373a40;
+    letter-spacing: 2px;
+    width: 8rem; }
+  .form--bgLight textarea {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #373a40;
+    padding: 1em;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    width: 98%;
+    height: 12rem;
+    border: none; }
+
+.form__submit--grey {
+  background-color: #373a40; }
+
+.form--animation:hover h4 {
+  color: #2e3035; }
+
+.form--animation:hover .form__submit {
+  background-color: #2e3035; }
+
+footer {
+  margin-top: 5rem;
+  background-color: #373a40; }
+
+.footer__div--links {
+  background-color: #0aa0c5;
+  padding: 4%; }
+  .footer__div--links ul {
+    list-style-type: none;
+    display: flex;
+    display: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center; }
+    .footer__div--links ul img {
+      height: 64px;
+      transition: all 0.5s; }
+    .footer__div--links ul img:hover {
+      transform: scale(1.2); }
+
+.footer__div--bottom p {
+  font-family: "Monserrat", sans-serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  color: whitesmoke;
+  text-align: center;
+  padding: .5%;
+  margin-bottom: 0; }
+
+.presentation--display {
+  justify-content: center; }
+
+.presentation__article {
+  margin: 4% 8%;
+  grid-column-gap: 2%; }
+  .presentation__article img {
+    width: 30rem;
+    height: 17rem;
+    object-fit: cover;
+    border-radius: 15px; }
+  .presentation__article h3 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #0aa0c5;
+    margin: 1% 0% 3% 0%; }
+  .presentation__article p {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #373a40;
+    letter-spacing: .08em;
+    text-align: justify; }
+
+.presentation__article--backward, .divFundador {
+  margin: 4% 8%;
+  display: grid;
+  grid-template-columns: auto 30rem;
+  grid-template-rows: max-content auto;
+  grid-template-areas: "title img" "textCard img";
+  grid-column-gap: 2%; }
+
+.product--display {
+  justify-content: center;
+  padding-bottom: 3em;
+  margin: 0% 6% 5% 6%; }
+  .product--display h3 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin: 0% 0% 5% 0%;
+    padding: .5em;
+    background-color: #19d3da;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; }
+
+.product__article--bg {
+  background-color: #f8f8f8; }
+
+.product__article--animation:hover {
+  transform: scale(1.03); }
+  .product__article--animation:hover h4 {
+    color: whitesmoke; }
+
+.cardQuienes {
+  background-color: #373a40; }
+  .cardQuienes p {
+    color: whitesmoke; }
+
+.divFundador {
+  margin: 4% 12%; }
+  .divFundador img {
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 15px;
+    object-position: center;
+    grid-area: img; }
+  .divFundador h4 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #0aa0c5;
+    margin: 2% 0% 3% 1%;
+    grid-area: title; }
+  .divFundador div {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #373a40;
+    grid-area: textCard;
+    align-items: center; }
+
+.form--paddingBottom form {
+  padding-bottom: 2.5em; }
+
+.productContainer {
+  padding-bottom: 3em;
+  margin: 0% 6% 5% 6%; }
+  .productContainer h3 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin: 0% 0% 5% 0%;
+    padding: .5em;
+    background-color: #19d3da;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; }
+  .productContainer p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    color: whitesmoke;
+    letter-spacing: .05em;
+    text-align: justify;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-bottom: 2em; }
+
+.productContainer--flex {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-evenly; }
+
+.productContainer__article {
+  width: 29rem; }
+
+.productContainer__article--wide {
+  width: 43rem; }
+  .productContainer__article--wide img {
+    width: 43rem;
+    height: 266.6px;
+    object-fit: cover;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .productContainer__article--wide p {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: .05em;
+    text-align: justify;
+    width: 45rem;
+    padding: 0em 2em; }
+
+.formProduct {
+  margin: 0em; }
+  .formProduct input {
+    width: 250px; }
+
+.articleContainer {
+  padding-bottom: 3em;
+  margin: 0% 5% 5% 5%; }
+  .articleContainer h3 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin: 5% 0% 4% 0%;
+    padding: .5em;
+    background-color: #0aa0c5;
+    border-radius: 15px; }
+
+.cardContainer--flex {
+  justify-content: space-between; }
+
+.articleCard {
+  width: 30rem;
+  padding-bottom: 2em; }
+  .articleCard span {
+    font-style: italic;
+    color: grey; }
+  .articleCard a {
+    text-decoration: none;
+    background-color: #19d3da;
+    padding: .3em 1em .3em .3em;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px; }
+
+.blogLinkContainer {
+  align-items: center;
+  justify-content: center;
+  margin: 3.5% 10%; }
+  .blogLinkContainer h4 {
+    padding: .7em;
+    margin: 0%;
+    font-family: "Monserrat", sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 900;
+    color: #19d3da; }
+  .blogLinkContainer img {
+    margin-bottom: 1.8em; }
+
+.formContainer {
+  align-items: center;
+  padding-bottom: 3em;
+  margin: 0% 6% 5% 6%;
+  text-align: center; }
+  .formContainer h3 {
+    font-family: "Monserrat", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 900;
+    color: #19d3da;
+    padding: 1em;
+    margin: 0px;
+    letter-spacing: .25em; }
+  .formContainer p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    color: whitesmoke;
+    letter-spacing: .05em;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-bottom: 1.5em; }
+  .formContainer form {
+    align-items: center;
+    background-color: #19d3da;
+    border-radius: 15px;
+    padding-top: 3em;
+    width: 80%;
+    text-align: left; }
+    .formContainer form div {
+      justify-content: space-between;
+      width: 68%;
+      margin-bottom: 1em; }
+      .formContainer form div label {
+        padding: 7px;
+        margin: 4px;
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: #373a40;
+        letter-spacing: 2px;
+        width: 7rem; }
+      .formContainer form div input, .formContainer form div select {
+        padding: 7px;
+        border-radius: 10px;
+        margin: 4px;
+        width: 15rem;
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: #373a40;
+        letter-spacing: 2px;
+        border: none; }
+      .formContainer form div select {
+        width: 32rem; }
+      .formContainer form div .formContainer__div--labelWidth {
+        width: 17rem; }
+      .formContainer form div textarea {
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: #373a40;
+        padding: 1em;
+        letter-spacing: 2px;
+        border-radius: 15px;
+        width: 100%;
+        height: 12rem;
+        border: none; }
+    .formContainer form .form__submit--custom {
+      color: whitesmoke;
+      background-color: #373a40;
+      width: fit-content;
+      padding: .6em;
+      border-radius: 7px;
+      border: none;
+      margin-bottom: 1.5em; }

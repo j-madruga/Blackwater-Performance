@@ -1,0 +1,193 @@
+// ----------------------------------------------------------------------------------
+// barra de navegación
+// ----------------------------------------------------------------------------------
+.nav__logo--size {
+    height: 70px;
+}
+.nav--background {
+    background-color: $darkBlue;
+}
+
+.nav--width {
+    width: 95%;
+}
+.nav__links {
+    a {
+        @include textStyle($ffLato, 1.3rem, normal, 800, $darkGrey);
+    }
+}
+
+// ----------------------------------------------------------------------------------
+// banner principal
+// ----------------------------------------------------------------------------------
+.banner__fondo--img {
+    background-image: url(/img/box-cross-banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin-top: 95px;
+}
+
+.banner__titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    height: 390px;
+    margin-bottom: 4%;
+    background: rgba(0,0,0,0.45);
+    h1 {
+        @include textStyle($ffLato, 160px, italic, 800, $darkBlue);
+        margin-bottom: -2%;
+    }
+}
+.banner__subtitle {
+    @include textStyle($ffLato, 4.5rem, initial, 900, $darkBlue);
+    letter-spacing: .6em;
+    padding-bottom: 0.5rem;
+    margin-right: -.6em;
+}
+.banner__subtitle--page {
+    @include textStyle($ffLato, 3.5rem, initial, 900, $lightBlue);
+    display: inline;
+    letter-spacing: .3em;
+    width: 18em;
+    align-self: center;
+    padding-right: -.3em;
+    margin-top: -.6em;
+    background: rgba(0,0,0,0.75);
+}
+
+// ----------------------------------------------------------------------------------
+// form
+// ----------------------------------------------------------------------------------
+// layout del form -----
+.form--flexRow {
+    @extend %displayFlexRow;
+    justify-content: center;
+    align-items: center;
+}
+.form--flexColumn {
+    @extend %displayFlexColumn;
+    justify-content: flex;
+    align-items: center;
+}
+// form container -----
+.form {
+    margin: 3.5% 10%;
+    h4 {
+        display: inline-block;
+        padding: .7em;
+        margin: 0%;
+        @include textStyle($ffMonserrat, 2.5rem, normal, 900, $lightBlue);
+    }
+    input {
+        padding: 7px;
+        border-radius: 10px;
+        margin: 4px;
+        width: 300px;
+        @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+        letter-spacing: 2px;
+        border: none;
+    }
+    .form__submit {
+        @extend %button;
+    }
+    .form__submit--blue {
+        background-color: $lightBlue;
+    }
+}
+// fondo oscuro form ---
+.form--bgDark {
+    @extend %darkContainer;
+}
+.form--bgLight {
+    @extend %displayFlexRow;
+    justify-content: center;
+    background-color: $lightBlue;
+    border-radius: 15px;
+    h4 {
+        color: $darkGrey;
+        margin: .5em;
+    }
+    form {
+        width: 78%;
+        margin-bottom: 1em;
+    }
+    div {
+        @extend %displayFlexRow;
+        justify-content: space-around;
+        width: 90%;
+        margin-bottom: 1em;
+    }
+    label {
+        padding: 7px;
+        margin: 4px;
+        @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+        letter-spacing: 2px;
+        width: 8rem;
+    }
+    textarea {
+        @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+        padding: 1em;
+        letter-spacing: 2px;
+        border-radius: 15px;
+        width: 98%;
+        height: 12rem;
+        border: none;
+    }
+}
+.form__submit {
+    @extend %button;
+}
+.form__submit--grey {
+    background-color: $darkGrey;
+}
+// animación del form --
+.form--animation {
+    @extend %articleAnimation;
+}
+.form--animation:hover {
+    @extend %articleAnimation:hover;
+    @extend %gradientHover;
+    h4 {
+        color: $darkerGrey;
+    }
+    .form__submit {
+        background-color: $darkerGrey;
+    }
+}
+
+// ----------------------------------------------------------------------------------
+// footer
+// ----------------------------------------------------------------------------------
+footer {
+    margin-top: 5rem;
+    background-color: $darkGrey;
+}
+.footer__div--links {
+    background-color: $darkBlue;
+    padding: 4%;
+    ul {
+        list-style-type: none;
+        display: flex;
+        display: row wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        img {
+            height: 64px;
+            transition: all 0.5s;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+.footer__div--bottom {
+    p {
+        @include textStyle($ffMonserrat, 1.3rem, italic, 500, whitesmoke);
+        text-align: center;
+        padding: .5%;
+        margin-bottom: 0;
+    }
+}

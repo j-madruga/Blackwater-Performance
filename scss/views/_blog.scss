@@ -1,0 +1,58 @@
+.articleContainer {
+    @extend %displayFlexColumn;
+    padding-bottom: 3em;
+    margin: 0% 5% 5% 5%;
+    h3 {
+        @include textStyle($ffMonserrat, 3rem, normal, 900, white);
+        text-align: center;
+        margin: 5% 0% 4% 0%;
+        padding: .5em;
+        background-color: $darkBlue;
+        border-radius: 15px;
+    }
+}
+.cardContainer--flex {
+    @extend %displayFlexRow;
+    justify-content: space-between;
+}
+.articleCard {
+    @extend %genericCard;
+    @extend %lightContainer;
+    @extend %displayFlexColumn;
+    width: 30rem;
+    padding-bottom: 2em;
+    span {
+        font-style: italic;
+        color: grey;
+    }
+    a {
+        @extend %button;
+        text-decoration: none;
+        background-color: $lightBlue;
+        padding: .3em 1em .3em .3em;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+.articleCard--animation {
+    @extend %articleAnimation;
+}
+.articleCard--animation:hover {
+    @extend %articleAnimation:hover;
+}
+.blogLinkContainer {
+    @extend %darkContainer;
+    @extend %displayFlexColumn;
+    @extend %articleAnimation;
+    align-items: center;
+    justify-content: center;
+    margin: 3.5% 10%;
+    h4 {
+        padding: .7em;
+        margin: 0%;
+        @include textStyle($ffMonserrat, 2.5rem, normal, 900, $lightBlue);
+    }
+    img {
+        margin-bottom: 1.8em;
+    }
+}

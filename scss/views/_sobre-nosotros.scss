@@ -1,0 +1,35 @@
+// tarjeta de quienes somos
+.cardQuienes {
+    @extend %articleGridLayout;
+    @extend %articleStyle;
+    background-color: $darkGrey;
+    p {
+        color: whitesmoke;
+    }
+}
+
+.divFundador {
+    @extend .presentation__article--backward;
+    margin: 4% 12%;
+    img {
+        @include img(30rem, 25rem, cover, 15px);
+        object-position: center;
+        grid-area: img;
+    }
+    h4 {
+        @include textStyle($ffMonserrat, 2.1rem, normal, 800, $darkBlue);
+        margin: 2% 0% 3% 1%;
+        grid-area: title;
+    }
+    div {
+        @include textStyle($ffMonserrat, 1.5rem, normal, 500, $darkGrey);
+        grid-area: textCard;
+        align-items: center;
+    }
+}
+
+.form--paddingBottom {
+    form {
+        padding-bottom: 2.5em;
+    }
+}

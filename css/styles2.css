@@ -1,0 +1,886 @@
+
+
+/*---color fondo del body---*/
+body {
+    background-color: #ffffff;
+}
+
+
+
+/*----------------MENU DE NAVEGACION (GENERAL)----------------*/
+/* flexbox del navbar */
+.nav-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #0aa0c5;
+}
+.nav-flex ul {
+    list-style-type: none;
+}
+
+.nav-flex ul li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav-flex ul li a {
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000000;
+    transition:all 0.4s ease 0s;/*para que haga la transición  con el hover de abajo */
+}
+
+.nav-flex ul li a:hover {
+    color: #ffffff;
+}
+
+/* img logo dentro del navbar */
+.img-logo {
+    width: 240px;
+    padding: 5px 0px 2px 0px;
+}
+
+
+
+/*----------------------------BANNER PRINCIPAL (GENERAL)----------------------------*/
+/* fondo del titulo principal*/
+.div-titulo-fondo {
+    background-image: url(img/boxCross.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* overley que opaca la imagen de fondo  */
+.div-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 390px;
+    background: rgba(0,0,0,0.45);
+    margin-bottom: 4%;
+}
+
+/* estilo del titulo y subtitulo para paginas que no son el main */
+.h1-nomain {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 160px;
+    color: #0aa0c5;
+}
+
+.h2-nomain {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 55px;
+    color: #0aa0c5;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 2px #0aa0c5;
+}
+
+.h3-nomain {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 55px;
+    color: #19d3da;
+    margin: .5em;
+}
+
+
+
+/*----------------------------INDEX----------------------------*/
+/*---tituto principal---*/
+#h1-index {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 160px;
+    text-align: center;
+    color: #0aa0c5;
+}
+
+#h2-index {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 55px;
+    text-align: center;
+    color: #0aa0c5;
+}
+
+/*---div de info institucional---*/
+/*flex a toda la seccion de información institucional*/
+.intro-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* flex a articulos dentro de info inst */
+.article-inst {
+    margin: 4% 8%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* propiedades de las imagenes dentro de info inst */
+.article-inst img {
+    width: 350px;
+    height: 266.6px;
+    object-fit: cover;
+    border-radius: 15px;
+} 
+
+.article-inst div {
+    flex: 1;
+    margin: 3%;
+}
+
+.article-inst div h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #0aa0c5;
+    margin: 2%;
+}
+
+.article-inst div p {
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #373a40;
+    margin: 2%;
+}
+
+/*---estilo de la seccion de productos del indez---*/
+/* flex de seccion de productos */
+#productos-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3%;
+    background-color: #373a40;
+    border-radius: 15px;
+}
+
+#productos-index h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    color: #ffffff;
+    text-align: center;
+    margin: 5% 0%;
+}
+
+/* flex para cada producto y catacteristicas*/
+.article-productos-index {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4%;
+}
+
+.article-productos-index img {
+    width: 350px;
+    height: 266.6px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.article-productos-index div {
+    flex: 1;
+    margin: 3%;
+}
+
+.article-productos-index div  h4 {
+    font-family: 'Lato', sans-serif;
+    color: #0aa0c5 ;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.article-productos-index div  p {
+    color: #ffffff;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* estilo de seccion de formulario de suscripción al blog */
+/* flex de seccion de suscripcion al blog */
+#blog-index {
+    background-color: #373a40;
+    margin: 0% 10% 3% 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+/* titulo de la seccion */
+#blog-index h4 {
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #0aa0c5;
+    margin-right: 15px;
+}
+
+/* input para el mail */
+#email-index {
+    padding: 7px;
+    border-radius: 10px;
+    margin: 4px;
+    width: 300px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: none;
+}
+
+/* boton submit */
+#submit-index {
+    padding: 7px;
+    border-radius: 10px;
+    background-color: #0aa0c5;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+    border: none;
+}
+
+
+
+/*------------------------ ACERCA DE ------------------------*/
+/* div con informacion de quienes somos */
+.div-quienes {
+    width: 80%;
+    height: fit-content;
+    background-color: #373a40;
+    margin: auto;
+    display: grid;
+    grid-template: 30% 70% / 70% 30%;
+    grid-template-areas:
+    "h3 img"
+    "p img";
+    border-radius: 20px;
+}
+
+#img-quienes {
+    grid-area: img;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 15px;
+    justify-self: center;
+    align-self: center;
+}
+
+#titulo-quienes {
+    grid-area: h3;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 10px;
+    color: #0aa0c5;
+    margin: 1.5em;
+}
+
+#p-quienes {
+    grid-area: p;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    margin: 3em 3em 3em 2.7em;
+}
+
+/*div con información del fundador*/
+.div-fundador{
+    width: 80%;
+    height: 500px;
+    margin: 3% auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "img titulo-f"
+    "img pfund"
+    "img p2fund"
+    "img listfund";
+    align-items: start;
+}
+#img-fundador {
+    grid-area: img;
+    max-width: 100%;
+    height: 90%;
+    object-fit: cover;
+    justify-self: center;
+    align-self: center;
+}
+
+#titulo-fundador {
+    grid-area: titulo-f;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: #19d3da;
+    margin: 4% 2%;
+}
+#p-fundador {
+    grid-area: pfund;
+    font-family: 'monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #373a40;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    margin: 2%;
+    height: fit-content;
+}
+#p2-fundador {
+    grid-area: p2fund;
+    font-family: 'monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    margin: 2% 2% 0% 2%;
+    height: fit-content;
+}
+#lista-fundador {
+    grid-area: listfund;
+    font-family: 'monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #373a40;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    margin: 0% 2% 0% 4%;
+}
+
+/* div pedido de informacion */
+#div-mail-acerca {
+    width: 50%;
+    height: 8rem;
+    background-color: #373a40;
+    margin: 3% auto 0% auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#titulo-mail-acerca {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: #19d3da;
+    text-align: center;
+    margin: 1.1rem;
+}
+
+#mail-acerca {
+    padding: 6px;
+    border-radius: 10px;
+    width: 25rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: none;
+}
+
+#submit-acerca {
+    padding: 5.5px;
+    border-radius: 10px;
+    background-color: #0aa0c5;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+    border: none;
+    margin-left: 0.5rem;
+}
+
+
+
+/*------------------------ PRODUCTOS ------------------------*/
+/* CONTENEDOR DE PRODUCTOS (GENERAL)*/
+.seccion-productos {
+    width: 95%;
+    height: fit-content;
+    background-color: #373a40;
+    margin: 3% auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+}
+/* titulo y descripcion de secciones de productos (GENERAL) */
+.titulo-section-product {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    color: #19d3da;
+    margin: 3% 3.5rem 2% 3.5rem;
+}
+.texto-section-product {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    margin: 0em 3em 1em 3.5rem;
+}
+/* contenedor de cards de productos con flex (GENERAL)*/
+.cards-product-div {
+    width: auto;
+    height: fit-content;
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+/* estilo de imagen dentro de cada card (GENERAL)*/
+.card-product-img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/* estilo de cards de PLANIFICACIONES */
+.tarjeta-plan {
+    width: 30%;
+    height: 60vh;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+/* titulo de las cards de PLANIFICACIONES */
+.planif-card-titulo {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: #19d3da;
+    margin: 4% 4% 3% 4%;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+}
+.list-card-plan {
+    font-family: 'monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #373a40;
+    line-height: 1.4rem;
+    letter-spacing: 0.1em;
+    margin: 0% 4% 0% 6%;
+}
+
+/* estilo de cards de CLASES */
+.cards-clases {
+    width: 46%;
+    height: 60vh;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.clases-card-titulo {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: #19d3da;
+    margin: 4% 4% 3% 6%;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+}
+.card-clases-texto {
+    font-family: 'monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #373a40;
+    line-height: 1.4rem;
+    letter-spacing: 0.1em;
+    margin: 0% 4% 0% 6%;
+}
+
+/* estilo de div de SESIONES PERS (CONTACTO) */
+.titulo-section-form {
+    width: 85%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    color: #19d3da;
+    margin: 3% auto 2% auto;
+    /* margin: 3% 3.5rem 2% 3.5rem; */
+}
+.texto-section-form {
+    width: 85%;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    margin: 0% auto;
+}
+.producto-sesion-pers {
+    width: 85%;
+    height: fit-content;
+    background-color: #0aa0c5;
+    margin: 3% auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    padding: 3rem;
+    border-radius: 20px;
+}
+.titulo-sesion-pers {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.form-sesion-pers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div-sesion-pers {
+    margin-bottom: 1.5rem;
+}
+.div-sesion-pers-2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.label-sesion-pers {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    width: 8rem;
+    display: inline-block;
+}
+.input-sesion-pers {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    width: 15em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+.input-sesion-pers-2 {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    width: 15em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+}
+.input-contanos-mas {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    width: 40rem;
+    height: 10em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+}
+.submit-grey {
+padding: 0.4em;
+border-radius: 5px;
+background-color: #373a40;
+font-family: 'Monserrat', sans-serif;
+font-size: 1rem;
+font-weight: 600;
+color: #ffffff;
+letter-spacing: 0.1em;
+border: none;
+align-self: flex-start;
+}
+/*----------------------------BLOG----------------------------*/
+/*grid de blog*/
+.grid-blog {
+    margin: 5%;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "articulo1 articulo2 articulo3"
+    "mas-art mas-art mas-art";
+    grid-template-rows: auto auto fit-content;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 4%;
+    margin-bottom: 2%;
+}
+
+/* titulo de la seccion */
+.h3-blog{
+    grid-area: titulo;
+    justify-self: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: .2em;
+    color: #19d3da;
+}
+
+.article1-blog {
+    grid-area: articulo1;
+    width: 28vw;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #373a40;
+    border-radius: 20px;
+}
+
+.article2-blog {
+    grid-area: articulo2;
+    width: 28vw;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #373a40;
+    border-radius: 20px;
+}
+
+.article3-blog {
+    grid-area: articulo3;
+    width: 28vw;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-Start;
+    background-color: #373a40;
+    border-radius: 20px;
+}
+
+.img-art-blog {
+    width: 28vw;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.art-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: #19d3da;
+    height: fit-content;
+    margin: 4% 4% 6% 4%;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+}
+
+.art-date {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffffff;
+    font-style: italic;
+    height: fit-content;
+    margin: 0% 4% 6% 4%;
+
+}
+
+.art-text {
+    height: fit-content;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0% 4% 4% 4%;
+}
+
+.readmore-button {
+    justify-self: flex-end;
+    width: fit-content;
+    font-family: 'monserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.3em;
+    background-color: #19d3da;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.readmore-button a:link, a:visited{
+    color: #ffffff;
+}
+
+#mas-art {
+    grid-area: mas-art;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: fit-content;
+    background-color: #373a40;
+    border-radius: 20px;
+}
+
+#mas-art h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.7em;
+    margin: 0.3em;
+    color: #19d3da;
+}
+
+.icon {
+width: 64px;
+height: 50px;
+margin-bottom: 4%;
+}
+
+
+
+/*------------------------ CONTACTO ------------------------*/
+.div-contacto-pers {
+    margin-bottom: 1.5rem;
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+}
+.label-contacto-pers {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    width: 8rem;
+    display: inline-block;
+}
+.label-contacto-pers-2 {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    width: 20rem;
+    display: inline-block;
+}
+.input-sesion-pers {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    width: 15em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+.input-sesion-pers-2 {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    width: 15em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+}
+.input-contanos-mas {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #373a40;
+    letter-spacing: 0.1em;
+    width: 50rem;
+    height: 10em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/*----------------------FOOTER (GENERAL)----------------------*/
+/*div con links e iconos*/
+footer {
+    margin-top: 150px;
+}
+
+.footer-links {
+    background-color: #0aa0c5;
+    padding: 4%;
+}
+
+.footer-links ul {
+    display: flex;
+    display: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    list-style-type: none;
+    align-items: center;
+}
+
+.footer-links ul li img {
+    width: 64px;
+    height: 64px;
+}
+
+#logo-footer {
+    width: 80%;
+}
+
+/*div abajo de todo*/
+.footer-bottom {
+    background-color: #373a40;
+}
+
+.footer-bottom p {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+    padding: .5%;
+}
