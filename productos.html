@@ -128,7 +128,7 @@
                 </div>
         </section>
             
-        <section class="productContainer">
+        <section class="productContainer productContainer--flexColumn">
         <!--producto: sesiones personalizadas-->
             <h3>SESIONES PERSONALIZADAS</h3>
             <p>¿Queres entrenar con nosotros de manera prescencial? 
@@ -137,10 +137,11 @@
             durante un periodo de 55 min, guiandote paso a paso, 
             enseñandote las tecnicas, corigiendote y asegurandose de que cada minuto 
             que estes en la sesion lo estes aprovechando al maximo.</p>
-            <div class="form form--bgLight">
+            <div class="formContainer">
             <!-- formulario de sesiones personalizadas -->
                 <h4>DEJANOS TUS DATOS ASI TE CONTACTAMOS</h4>
-                <form action="" class="form--flexColumn">
+                <div>
+                <form action="">
                     <div>
                         <label for="name">NOMBRE</label>
                         <input type="text" name="name" placeholder=" JUAN">
@@ -156,10 +157,11 @@
                     <div>
                         <textarea name="consultaPers" placeholder=" CONTANOS UN POCO MAS (OPCIONAL)"></textarea>
                     </div>
-                    <div>
-                        <input type="submit" value="ENVIAR" class="form__submit form__submit--grey">
+                    <div class="productContainer__submit">
+                        <input type="submit" value="ENVIAR">
                     </div>
                 </form>
+                </div>
             </div>
         </section>
     </main>

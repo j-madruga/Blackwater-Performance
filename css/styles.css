@@ -98,7 +98,7 @@
   background: #031b21;
   background: linear-gradient(42deg, #031b21 0%, #0aa0c5 47%, #19d3da 100%); }
 
-.actionCall, .product--display, .productContainer, .blogLinkContainer, .formContainer {
+.actionCall, .product--display, .productContainer, .blogLinkContainer {
   background-color: #373a40;
   box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
   border-radius: 15px; }
@@ -108,15 +108,15 @@
   box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
   border-radius: 15px; }
 
-.presentation--display, .product--display, .productContainer, .productContainer__article, .articleContainer, .articleCard, .blogLinkContainer, .formContainer, .formContainer form {
+.formContainer form, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer {
   display: flex;
   flex-direction: column; }
 
-.actionCall--flexRow, .form--bgLight, .form--bgLight div, .productContainer--flex, .cardContainer--flex, .formContainer form div {
+.actionCall--flexRow, .productContainer--flex, .cardContainer--flex {
   display: flex;
   flex-flow: row wrap; }
 
-.actionCall .actionCall__submit, .form__submit, .articleCard div a {
+.actionCall .actionCall__submit, .form__submit, .productContainer__submit, .articleCard div a {
   font-family: "Monserrat", sans-serif;
   font-size: 0.9rem;
   font-style: normal;
@@ -216,42 +216,69 @@
   .actionCall .actionCall__submit {
     background-color: #19d3da; }
 
-.form--bgLight {
-  justify-content: center;
-  background-color: #19d3da;
-  border-radius: 15px; }
-  .form--bgLight h4 {
-    color: #373a40;
-    margin: .5em; }
-  .form--bgLight form {
-    width: 78%;
-    margin-bottom: 1em; }
-  .form--bgLight div {
-    justify-content: space-around;
-    width: 90%;
-    margin-bottom: 1em; }
-  .form--bgLight label {
-    padding: 7px;
-    margin: 4px;
+.formContainer {
+  margin: auto;
+  background-color: #19d3da; }
+  .formContainer h4 {
     font-family: "Monserrat", sans-serif;
-    font-size: 1rem;
+    font-size: 2.125rem;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 900;
     color: #373a40;
-    letter-spacing: 2px;
-    width: 8rem; }
-  .form--bgLight textarea {
-    font-family: "Monserrat", sans-serif;
-    font-size: 1rem;
+    margin: 1em; }
+  .formContainer p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
     font-style: normal;
-    font-weight: 800;
-    color: #373a40;
-    padding: 1em;
-    letter-spacing: 2px;
-    border-radius: 15px;
-    width: 98%;
-    height: 12rem;
-    border: none; }
+    font-weight: 500;
+    color: whitesmoke;
+    letter-spacing: .05em;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-bottom: 1.5em; }
+  .formContainer form {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    .formContainer form div {
+      align-content: stretch;
+      margin-bottom: 1rem; }
+      .formContainer form div label {
+        padding: 7px;
+        margin: 4px;
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: #373a40;
+        letter-spacing: 2px;
+        width: 8rem; }
+      .formContainer form div input, .formContainer form div select {
+        padding: 7px;
+        border-radius: 10px;
+        margin: 4px;
+        width: 15rem;
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: #373a40;
+        letter-spacing: 2px;
+        border: none; }
+      .formContainer form div select {
+        width: 32rem; }
+      .formContainer form div textarea {
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: #373a40;
+        padding: 1em;
+        letter-spacing: 2px;
+        border-radius: 15px;
+        width: 48rem;
+        height: 12rem;
+        border: none; }
 
 .form__submit--grey {
   background-color: #373a40; }
@@ -259,7 +286,7 @@
 .actionCall--animation:hover h4 {
   color: #2e3035; }
 
-.actionCall--animation:hover .form__submit {
+.actionCall--animation:hover .actionCall__submit {
   background-color: #2e3035; }
 
 footer {
@@ -389,8 +416,8 @@ footer {
     grid-area: textCard;
     align-items: center; }
 
-.form--paddingBottom form {
-  padding-bottom: 2.5em; }
+.actionCall__form--padding form {
+  padding-bottom: 1.8em; }
 
 .productContainer {
   padding-bottom: 3em;
@@ -443,6 +470,15 @@ footer {
     letter-spacing: .03em;
     padding: 1em; }
 
+.productContainer--flexColumn {
+  justify-content: space-evenly;
+  align-items: center; }
+  .productContainer--flexColumn h3 {
+    align-self: stretch; }
+
+.productContainer__submit {
+  color: whitesmoke; }
+
 .articleContainer {
   padding-bottom: 3em;
   margin: 0% 3% 5% 3%; }
@@ -463,14 +499,14 @@ footer {
 
 .articleCard {
   justify-content: space-around;
-  width: 29vw;
-  height: 35rem; }
+  width: 29vw; }
   .articleCard img {
     height: 11rem; }
   .articleCard span {
     font-style: italic;
     color: grey; }
   .articleCard p {
+    font-size: .9rem;
     padding: .5em 1em;
     margin-bottom: 0em;
     letter-spacing: .02em; }
@@ -499,85 +535,3 @@ footer {
     color: #19d3da; }
   .blogLinkContainer img {
     margin-bottom: 1.8em; }
-
-.formContainer {
-  align-items: center;
-  padding-bottom: 3em;
-  margin: 0% 6% 5% 6%;
-  text-align: center; }
-  .formContainer h3 {
-    font-family: "Monserrat", sans-serif;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 900;
-    color: #19d3da;
-    padding: 1em;
-    margin: 0px;
-    letter-spacing: .25em; }
-  .formContainer p {
-    font-family: "Lato", sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 500;
-    color: whitesmoke;
-    letter-spacing: .05em;
-    padding-left: 4em;
-    padding-right: 4em;
-    margin-bottom: 1.5em; }
-  .formContainer form {
-    align-items: center;
-    background-color: #19d3da;
-    border-radius: 15px;
-    padding-top: 3em;
-    width: 80%;
-    text-align: left; }
-    .formContainer form div {
-      justify-content: space-between;
-      width: 68%;
-      margin-bottom: 1em; }
-      .formContainer form div label {
-        padding: 7px;
-        margin: 4px;
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: #373a40;
-        letter-spacing: 2px;
-        width: 7rem; }
-      .formContainer form div input, .formContainer form div select {
-        padding: 7px;
-        border-radius: 10px;
-        margin: 4px;
-        width: 15rem;
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: #373a40;
-        letter-spacing: 2px;
-        border: none; }
-      .formContainer form div select {
-        width: 32rem; }
-      .formContainer form div .formContainer__div--labelWidth {
-        width: 17rem; }
-      .formContainer form div textarea {
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: #373a40;
-        padding: 1em;
-        letter-spacing: 2px;
-        border-radius: 15px;
-        width: 100%;
-        height: 12rem;
-        border: none; }
-    .formContainer form .form__submit--custom {
-      color: whitesmoke;
-      background-color: #373a40;
-      width: fit-content;
-      padding: .6em;
-      border-radius: 7px;
-      border: none;
-      margin-bottom: 1.5em; }

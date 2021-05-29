@@ -21,7 +21,6 @@
     @extend %displayFlexColumn;
     justify-content: space-around;
     width: 29vw;
-    height: 35rem;
     img {
         height: 11rem;
     }
@@ -30,6 +29,7 @@
         color: grey;
     }
     p {
+        font-size: .9rem;
         padding: .5em 1em;
         margin-bottom: 0em;
         letter-spacing: .02em;

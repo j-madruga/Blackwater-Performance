@@ -58,7 +58,7 @@
 }
 
 // ----------------------------------------------------------------------------------
-// form
+// call to action
 // ----------------------------------------------------------------------------------
 // layout del call to action -----
 .actionCall--flexRow {
@@ -92,41 +92,63 @@
     }
 }
 
-.form--bgLight {
-    @extend %displayFlexRow;
-    justify-content: center;
+.formContainer {
+//     align-self: stretch;
+    margin: auto;
+//     @extend %displayFlexColumn;
+//     justify-content: space-around;
+//     align-content: center;
     background-color: $lightBlue;
-    border-radius: 15px;
+//     border-radius: 15px;
     h4 {
-        color: $darkGrey;
-        margin: .5em;
+        @include textStyle($ffMonserrat, 2.125rem, normal, 900, $darkGrey);
+        margin: 1em;
+    }
+    p {
+        @include textStyle($ffLato, 1.5rem, normal, 500, whitesmoke);
+        letter-spacing: .05em;
+        padding-left: 4em;
+        padding-right: 4em;
+        margin-bottom: 1.5em;
     }
     form {
-        width: 78%;
-        margin-bottom: 1em;
-    }
-    div {
-        @extend %displayFlexRow;
-        justify-content: space-around;
-        width: 90%;
-        margin-bottom: 1em;
-    }
-    label {
-        padding: 7px;
-        margin: 4px;
-        @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-        letter-spacing: 2px;
-        width: 8rem;
-    }
-    textarea {
-        @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-        padding: 1em;
-        letter-spacing: 2px;
-        border-radius: 15px;
-        width: 98%;
-        height: 12rem;
-        border: none;
-    }
+        @extend %displayFlexColumn;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        div {
+            align-content: stretch;
+            margin-bottom: 1rem;
+            label {
+                padding: 7px;
+                margin: 4px;
+                @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                letter-spacing: 2px;
+                width: 8rem;
+            }
+            input, select {
+                padding: 7px;
+                border-radius: 10px;
+                margin: 4px;
+                width: 15rem;
+                @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                letter-spacing: 2px;
+                border: none;
+            }
+            select {
+                width: 32rem;
+            }
+            textarea {
+                @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                padding: 1em;
+                letter-spacing: 2px;
+                border-radius: 15px;
+                width: 48rem;
+                height: 12rem;
+                border: none;
+            }
+        }  
+    }   
 }
 .form__submit {
     @extend %button;
@@ -144,7 +166,7 @@
     h4 {
         color: $darkerGrey;
     }
-    .form__submit {
+    .actionCall__submit {
         background-color: $darkerGrey;
     }
 }

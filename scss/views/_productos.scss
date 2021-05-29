@@ -1,6 +1,5 @@
 // div contenedor de productos mas titulo y texto
 .productContainer {
-    @extend %displayFlexColumn;
     @extend %darkContainer;
     padding-bottom: 3em;
     margin: 0% 4% 5% 4%;
@@ -54,12 +53,17 @@
 .productContainer__article--animation:hover {
     @extend %articleAnimation:hover;
 }
-
-// form de sesion personalizadas
-// .formProduct {
-//     @extend .form;
-//     margin: 0em;
-//         input {
-//             width: 250px;
-//         }
-// }
+// div con flex que contiene el formulario
+.productContainer--flexColumn {
+    @extend %displayFlexColumn;
+    justify-content: space-evenly;
+    align-items: center;
+    h3 {
+        align-self: stretch;
+    }
+}
+.productContainer__submit {
+    @extend %button;
+    // background-color: $darkGrey;
+    color: whitesmoke;
+}
