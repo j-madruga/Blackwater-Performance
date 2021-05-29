@@ -63,7 +63,7 @@ $ffMonserrat: 'Monserrat', sans-serif;
     margin: 1% 4%;
     border-radius: 15px;
     img {
-        @include img(30rem, 17rem, cover, 15px);
+        @include img(28rem, 15rem, cover, 15px);
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         grid-area: img;
@@ -78,7 +78,7 @@ $ffMonserrat: 'Monserrat', sans-serif;
         border-top-right-radius: 15px;
     }
     p {
-        @include textStyle($ffLato, 1.5rem, normal, 500, $darkGrey);
+        @include textStyle($ffLato, 1.1rem, normal, 500, $darkGrey);
         letter-spacing: .05em;
         text-align: justify;
         grid-area: textCard;
@@ -94,27 +94,27 @@ $ffMonserrat: 'Monserrat', sans-serif;
     background-color: whitesmoke;
     border-radius: 15px;
     img {
-        @include img(auto, 17rem, cover, 15px);
+        @include img(auto, 15rem, cover, 15px);
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
     h4 {
-        @include textStyle($ffMonserrat, 1.5rem, normal, 800, $darkGrey);
+        @include textStyle($ffMonserrat, 1.25rem, normal, 800, $darkGrey);
         background-color: $lightBlue;
         padding: .5em 1.25em;
     }
     ul {
-        @include textStyle($ffMonserrat, 1.2rem, normal, 600, $darkGrey);
-        letter-spacing: .05em;
+        @include textStyle($ffMonserrat, 1rem, normal, 600, $darkGrey);
+        letter-spacing: .03em;
         text-align: justify;
-        margin: .8em 1.4em .8em .4em;
+        margin: .8em 1.4em .8em 0em;
     }
     p {
-        @include textStyle($ffMonserrat, 1.3rem, normal, 600, $darkGrey);
-        letter-spacing: .05em;
+        @include textStyle($ffMonserrat, 1rem, normal, 600, $darkGrey);
+        letter-spacing: .03em;
         text-align: justify;
-        width: 30rem;
-        padding: 0em 2em;
+        width: auto;
+        padding: 1em;
     }
 }
 
@@ -163,6 +163,6 @@ $ffMonserrat: 'Monserrat', sans-serif;
 // boton
 // ----------------------------------------------------------------------------------
 %button {
-    @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
+    @include textStyle($ffMonserrat, .9rem, normal, 800, whitesmoke);
     width: auto;
 }

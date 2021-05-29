@@ -60,46 +60,38 @@
 // ----------------------------------------------------------------------------------
 // form
 // ----------------------------------------------------------------------------------
-// layout del form -----
-.form--flexRow {
+// layout del call to action -----
+.actionCall--flexRow {
     @extend %displayFlexRow;
     justify-content: center;
     align-items: center;
 }
-.form--flexColumn {
-    @extend %displayFlexColumn;
-    justify-content: flex;
-    align-items: center;
-}
-// form container -----
-.form {
+
+// call to action container -----
+.actionCall {
+    @extend %darkContainer;
     margin: 3.5% 10%;
+    text-align: center;
     h4 {
-        display: inline-block;
         padding: .7em;
         margin: 0%;
-        @include textStyle($ffMonserrat, 2.5rem, normal, 900, $lightBlue);
+        @include textStyle($ffMonserrat, 2.125rem, normal, 900, $lightBlue);
     }
     input {
-        padding: 7px;
+        padding: 4px;
         border-radius: 10px;
         margin: 4px;
         width: 300px;
-        @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+        @include textStyle($ffMonserrat, .9rem, normal, 800, $darkGrey);
         letter-spacing: 2px;
         border: none;
     }
-    .form__submit {
+    .actionCall__submit {
         @extend %button;
-    }
-    .form__submit--blue {
         background-color: $lightBlue;
     }
 }
-// fondo oscuro form ---
-.form--bgDark {
-    @extend %darkContainer;
-}
+
 .form--bgLight {
     @extend %displayFlexRow;
     justify-content: center;
@@ -143,10 +135,10 @@
     background-color: $darkGrey;
 }
 // animación del form --
-.form--animation {
+.actionCall--animation {
     @extend %articleAnimation;
 }
-.form--animation:hover {
+.actionCall--animation:hover {
     @extend %articleAnimation:hover;
     @extend %gradientHover;
     h4 {

@@ -2,33 +2,33 @@
 .presentation--display {
     @extend %displayFlexColumn;
     justify-content: center;
+    margin: 5% 5%
 }
 .presentation__article {
     @extend %articleGridLayout;
-    margin: 4% 8%;
+    // width: 90vw;
+    margin-bottom: 5%;
     grid-column-gap: 2%;
     img {
-        @include img(30rem, 17rem, cover, 15px);
+        @include img(25rem, 15rem, cover, 15px);
     }
     h3 {
-        @include textStyle($ffMonserrat, 2.1rem, normal, 800, $darkBlue);
-        margin: 1% 0% 3% 0%;
+        @include textStyle($ffMonserrat, 1.8rem, normal, 800, $darkBlue);
+        margin: 1% 0% 3.5% 0%;
     }
     p {
-        @include textStyle($ffMonserrat, 1.5rem, normal, 500, $darkGrey);
+        @include textStyle($ffMonserrat, 1.25rem, normal, 500, $darkGrey);
         letter-spacing: .08em;
         text-align: justify;
     }
 }
 .presentation__article--backward {
-    margin: 4% 8%;
     display: grid;
-    grid-template-columns: auto 30rem;
+    grid-template-columns: auto 25rem;
     grid-template-rows: max-content auto;
     grid-template-areas: 
     "title img"
     "textCard img";
-    grid-column-gap: 2%;
 }
 
 // Estilo seccion de productos
@@ -37,7 +37,7 @@
     justify-content: center;
     @extend %darkContainer;
     padding-bottom: 3em;
-    margin: 0% 6% 5% 6%;
+    margin: 0% 4% 5% 4%;
     h3 {
         @include textStyle($ffMonserrat, 3rem, normal, 900, white);
         text-align: center;
@@ -64,5 +64,15 @@
     h4 {
         color: whitesmoke;
         @extend %gradientHover;
+    }
+}
+
+// estilo de call to action
+.actionCall--inlineBlock {
+    h4 {
+        display: inline-block;
+    }
+    form {
+        display: inline-block;
     }
 }
