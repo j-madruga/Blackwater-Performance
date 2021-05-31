@@ -141,7 +141,7 @@
   color: #373a40; }
 
 .banner__titulo {
-  background-image: url(/img/box-cross-banner.jpg);
+  background-image: url(../img/box-cross-banner.jpg);
   background-size: cover;
   background-position: center center;
   margin-top: 95px;
