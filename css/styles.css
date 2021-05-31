@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: max-content auto;
   grid-template-rows: max-content auto;
-  grid-template-areas: "img title" "img textCard"; }
+  grid-template-areas: "img title" "img textCard"; }
   .presentation__article img, .product__article img, .cardQuienes img {
     grid-area: img; }
   .presentation__article h3, .product__article h3, .cardQuienes h3 {

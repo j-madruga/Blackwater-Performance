@@ -45,9 +45,7 @@ $ffMonserrat: 'Monserrat', sans-serif;
     display: grid;
     grid-template-columns: max-content auto;
     grid-template-rows: max-content auto;
-    grid-template-areas: 
-    "img title"
-    "img textCard";
+    grid-template-areas: "img title" "img textCard";
     img {
         grid-area: img;
     }
