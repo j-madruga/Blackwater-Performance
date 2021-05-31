@@ -22,7 +22,7 @@
     justify-content: space-around;
     width: 29vw;
     img {
-        height: 11rem;
+        height: 12rem;
     }
     span {
         font-style: italic;
@@ -67,6 +67,7 @@
         @include textStyle($ffMonserrat, 2.5rem, normal, 900, $lightBlue);
     }
     img {
-        margin-bottom: 1.8em;
+        height: 2.7rem;
+        margin-bottom: 1.5em;
     }
 }
