@@ -20,42 +20,55 @@
 // ----------------------------------------------------------------------------------
 // banner principal
 // ----------------------------------------------------------------------------------
-.banner__fondo--img {
+// .banner__fondo--img {
+    // }
+
+.banner__titulo {
     background-image: url(/img/box-cross-banner.jpg);
     background-size: cover;
     background-position: center center;
     margin-top: 95px;
-}
-
-.banner__titulo {
     display: flex;
     flex-direction: column;
     justify-content: center; 
     text-align: center;
     height: 390px;
     margin-bottom: 4%;
-    background: rgba(0,0,0,0.45);
+    position: relative;
     h1 {
         @include textStyle($ffLato, 160px, italic, 800, $darkBlue);
         margin-bottom: -2%;
+        z-index: 1;
+    }
+    p {
+        @include textStyle($ffLato, 4.5rem, initial, 900, $darkBlue);
+        letter-spacing: .6em;
+        padding-bottom: 0.5rem;
+        margin-right: -.6em;
+        z-index: 1;
+    }
+    .banner__subtitle--page {
+        @include textStyle($ffLato, 3.5rem, initial, 900, $lightBlue);
+        display: inline;
+        letter-spacing: .3em;
+        width: 18em;
+        align-self: center;
+        margin: 0%;
+        margin-top: -.6em;
+        margin-right: -.3em;
+        background: rgba(0,0,0,0.75);
+        background-position: center;
+        z-index: 1;
     }
 }
-.banner__subtitle {
-    @include textStyle($ffLato, 4.5rem, initial, 900, $darkBlue);
-    letter-spacing: .6em;
-    padding-bottom: 0.5rem;
-    margin-right: -.6em;
+.banner__titulo::before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.45);
 }
-.banner__subtitle--page {
-    @include textStyle($ffLato, 3.5rem, initial, 900, $lightBlue);
-    display: inline;
-    letter-spacing: .3em;
-    width: 18em;
-    align-self: center;
-    padding-right: -.3em;
-    margin-top: -.6em;
-    background: rgba(0,0,0,0.75);
-}
+
 
 // ----------------------------------------------------------------------------------
 // call to action
