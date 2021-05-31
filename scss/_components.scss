@@ -91,33 +91,50 @@
         background-color: $lightBlue;
     }
 }
-
+// animación del call to action --
+.actionCall--animation {
+    @extend %articleAnimation;
+}
+.actionCall--animation:hover {
+    @extend %articleAnimation:hover;
+    @extend %gradientHover;
+    h4 {
+        color: $darkerGrey;
+    }
+    .actionCall__submit {
+        background-color: $darkerGrey;
+    }
+}
+// ----------------------------------------------------------------------------------
+// form
+// ----------------------------------------------------------------------------------
 .formContainer {
-//     align-self: stretch;
     margin: auto;
-//     @extend %displayFlexColumn;
-//     justify-content: space-around;
-//     align-content: center;
+    @extend %displayFlexColumn;
     background-color: $lightBlue;
-//     border-radius: 15px;
+    border-radius: 15px;
     h4 {
         @include textStyle($ffMonserrat, 2.125rem, normal, 900, $darkGrey);
         margin: 1em;
     }
     p {
-        @include textStyle($ffLato, 1.5rem, normal, 500, whitesmoke);
+        @include textStyle($ffLato, 1.5rem, normal, 600, whitesmoke);
         letter-spacing: .05em;
         padding-left: 4em;
         padding-right: 4em;
         margin-bottom: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
     }
     form {
         @extend %displayFlexColumn;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        text-align: left;
         div {
-            align-content: stretch;
+            @extend %displayFlexRow;
+            flex-wrap: wrap;
             margin-bottom: 1rem;
             label {
                 padding: 7px;
@@ -135,9 +152,6 @@
                 letter-spacing: 2px;
                 border: none;
             }
-            select {
-                width: 32rem;
-            }
             textarea {
                 @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
                 padding: 1em;
@@ -147,29 +161,15 @@
                 height: 12rem;
                 border: none;
             }
+            .form__submit {
+                @extend %button;
+                @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
+                background-color: $darkGrey;
+            }
         }  
     }   
 }
-.form__submit {
-    @extend %button;
-}
-.form__submit--grey {
-    background-color: $darkGrey;
-}
-// animación del form --
-.actionCall--animation {
-    @extend %articleAnimation;
-}
-.actionCall--animation:hover {
-    @extend %articleAnimation:hover;
-    @extend %gradientHover;
-    h4 {
-        color: $darkerGrey;
-    }
-    .actionCall__submit {
-        background-color: $darkerGrey;
-    }
-}
+
 
 // ----------------------------------------------------------------------------------
 // footer

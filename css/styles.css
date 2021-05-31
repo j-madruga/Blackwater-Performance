@@ -108,15 +108,15 @@
   box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
   border-radius: 15px; }
 
-.formContainer form, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer {
+.formContainer, .formContainer form, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer, .formContainer--custom {
   display: flex;
   flex-direction: column; }
 
-.actionCall--flexRow, .productContainer--flex, .cardContainer--flex {
+.actionCall--flexRow, .formContainer form div, .productContainer--flex, .cardContainer--flex {
   display: flex;
   flex-flow: row wrap; }
 
-.actionCall .actionCall__submit, .form__submit, .productContainer__submit, .articleCard div a {
+.actionCall .actionCall__submit, .formContainer form div .form__submit, .articleCard div a {
   font-family: "Monserrat", sans-serif;
   font-size: 0.9rem;
   font-style: normal;
@@ -216,9 +216,16 @@
   .actionCall .actionCall__submit {
     background-color: #19d3da; }
 
+.actionCall--animation:hover h4 {
+  color: #2e3035; }
+
+.actionCall--animation:hover .actionCall__submit {
+  background-color: #2e3035; }
+
 .formContainer {
   margin: auto;
-  background-color: #19d3da; }
+  background-color: #19d3da;
+  border-radius: 15px; }
   .formContainer h4 {
     font-family: "Monserrat", sans-serif;
     font-size: 2.125rem;
@@ -230,18 +237,21 @@
     font-family: "Lato", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     color: whitesmoke;
     letter-spacing: .05em;
     padding-left: 4em;
     padding-right: 4em;
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    text-align: center; }
   .formContainer form {
     justify-content: space-between;
     align-items: center;
-    width: 100%; }
+    width: 100%;
+    text-align: left; }
     .formContainer form div {
-      align-content: stretch;
+      flex-wrap: wrap;
       margin-bottom: 1rem; }
       .formContainer form div label {
         padding: 7px;
@@ -265,8 +275,6 @@
         color: #373a40;
         letter-spacing: 2px;
         border: none; }
-      .formContainer form div select {
-        width: 32rem; }
       .formContainer form div textarea {
         font-family: "Monserrat", sans-serif;
         font-size: 1rem;
@@ -279,15 +287,13 @@
         width: 48rem;
         height: 12rem;
         border: none; }
-
-.form__submit--grey {
-  background-color: #373a40; }
-
-.actionCall--animation:hover h4 {
-  color: #2e3035; }
-
-.actionCall--animation:hover .actionCall__submit {
-  background-color: #2e3035; }
+      .formContainer form div .form__submit {
+        font-family: "Monserrat", sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 800;
+        color: whitesmoke;
+        background-color: #373a40; }
 
 footer {
   margin-top: 5rem;
@@ -476,9 +482,6 @@ footer {
   .productContainer--flexColumn h3 {
     align-self: stretch; }
 
-.productContainer__submit {
-  color: whitesmoke; }
-
 .articleContainer {
   padding-bottom: 3em;
   margin: 0% 3% 5% 3%; }
@@ -535,3 +538,21 @@ footer {
     color: #19d3da; }
   .blogLinkContainer img {
     margin-bottom: 1.8em; }
+
+.formContainer--custom {
+  width: 95%;
+  justify-content: center;
+  align-items: center; }
+  .formContainer--custom h4 {
+    text-align: center;
+    padding: 1em;
+    margin: 0em; }
+  .formContainer--custom form {
+    width: max-content; }
+    .formContainer--custom form div {
+      justify-content: center;
+      width: 100%; }
+    .formContainer--custom form .formContainer__div--custom {
+      justify-content: space-between; }
+      .formContainer--custom form .formContainer__div--custom label, .formContainer--custom form .formContainer__div--custom select {
+        width: max-content; }
