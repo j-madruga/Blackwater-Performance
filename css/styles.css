@@ -140,6 +140,16 @@
   font-weight: 800;
   color: #373a40; }
 
+@media only screen and (max-width: 768px) {
+  nav {
+    padding-right: 2em; }
+    nav .nav__links a {
+      font-family: "Lato", sans-serif;
+      font-size: 0.9rem;
+      font-style: normal;
+      font-weight: 800;
+      color: #373a40; } }
+
 .banner__titulo {
   background-image: url(../img/box-cross-banner.jpg);
   background-size: cover;
@@ -154,7 +164,7 @@
   position: relative; }
   .banner__titulo h1 {
     font-family: "Lato", sans-serif;
-    font-size: 160px;
+    font-size: 10rem;
     font-style: italic;
     font-weight: 800;
     color: #0aa0c5;
@@ -195,6 +205,14 @@
   position: absolute;
   background: rgba(0, 0, 0, 0.45); }
 
+@media only screen and (max-width: 768px) {
+  .banner__titulo h1 {
+    font-size: 6.5rem; }
+  .banner__titulo p {
+    font-size: 3rem; }
+  .banner__titulo .banner__subtitle--page {
+    font-size: 2.5rem; } }
+
 .actionCall--flexRow {
   justify-content: center;
   align-items: center; }
@@ -230,6 +248,12 @@
 
 .actionCall--animation:hover .actionCall__submit {
   background-color: #2e3035; }
+
+@media only screen and (max-width: 768px) {
+  .actionCall h4 {
+    padding-bottom: .2em; }
+  .actionCall form {
+    margin-bottom: 1.75em; } }
 
 .formContainer {
   margin: auto;
@@ -368,6 +392,18 @@ footer {
   grid-template-rows: max-content auto;
   grid-template-areas: "title img" "textCard img"; }
 
+@media only screen and (max-width: 768px) {
+  .presentation__article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "img" "title" "textCard"; }
+    .presentation__article img {
+      width: 90vw;
+      height: 20rem;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 1em; } }
+
 .product--display {
   justify-content: center;
   padding-bottom: 3em;
@@ -392,6 +428,20 @@ footer {
   transform: scale(1.03); }
   .product__article--animation:hover h4 {
     color: whitesmoke; }
+
+@media only screen and (max-width: 768px) {
+  .product__article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "img" "title" "textCard"; }
+    .product__article img {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+      border-radius: 15px;
+      border-radius: 15px 15px 0px 0px; }
+    .product__article h4 {
+      border-radius: 0px; } }
 
 .actionCall--inlineBlock h4 {
   display: inline-block; }
