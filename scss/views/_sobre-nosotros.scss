@@ -28,7 +28,40 @@
         align-items: center;
     }
 }
-
+@media only screen and (max-width: 768px) {
+    .cardQuienes {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "img" "title" "textCard";
+        img {
+            @include img(100%, 15rem, cover, 15px);
+            object-position: top;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+        }
+        h4 {
+            padding-left: .9em;
+            margin-bottom: 0em;
+        }
+        p {
+            padding-top: 1em;
+        }
+    }
+    .divFundador {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "img" "title" "textCard";
+        img {
+            @include img(100%, 28rem, cover, 15px);
+            object-position: center;
+            border-radius: 15px;
+        }
+        h4 {
+            padding: .2em 0em;
+            margin-bottom: .4em;
+        }
+    }
+}
 .actionCall__form--padding {
     form {
         padding-bottom: 1.8em;
