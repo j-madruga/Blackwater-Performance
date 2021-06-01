@@ -30,18 +30,6 @@
     "title img"
     "textCard img";
 }
-// responsive de seccion de presentacion
-@media only screen and (max-width: 768px) {
-    .presentation__article {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "img" "title" "textCard";
-        img {
-            @include img(90vw, 20rem, cover, 15px);
-            margin-bottom: 1em;
-        }
-    }
-}
 // Estilo seccion de productos
 .product--display {
     @extend %displayFlexColumn;
@@ -77,21 +65,6 @@
         @extend %gradientHover;
     }
 }
-// responsive de cards de productos del index
-@media only screen and (max-width: 768px) {
-    .product__article {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "img" "title" "textCard";
-    img {
-        @include img(100%, 15rem, cover, 15px);
-        border-radius: 15px 15px 0px 0px;
-        }
-    h4 {
-        border-radius: 0px;
-        }
-    }
-}
 
 // estilo de call to action
 .actionCall--inlineBlock {
@@ -103,3 +76,29 @@
     }
 }
 
+// responsive del index
+@media only screen and (max-width: 768px) {
+    // responsive de seccion de presentacion
+    .presentation__article {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "img" "title" "textCard";
+        img {
+            @include img(90vw, 20rem, cover, 15px);
+            margin-bottom: 1em;
+        }
+    }
+    // responsive de cards de productos del index
+    .product__article {
+        grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "img" "title" "textCard";
+    img {
+        @include img(100%, 15rem, cover, 15px);
+        border-radius: 15px 15px 0px 0px;
+        }
+    h4 {
+        border-radius: 0px;
+        }
+    }
+}

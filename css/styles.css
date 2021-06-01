@@ -392,18 +392,6 @@ footer {
   grid-template-rows: max-content auto;
   grid-template-areas: "title img" "textCard img"; }
 
-@media only screen and (max-width: 768px) {
-  .presentation__article {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "img" "title" "textCard"; }
-    .presentation__article img {
-      width: 90vw;
-      height: 20rem;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 1em; } }
-
 .product--display {
   justify-content: center;
   padding-bottom: 3em;
@@ -429,7 +417,23 @@ footer {
   .product__article--animation:hover h4 {
     color: whitesmoke; }
 
+.actionCall--inlineBlock h4 {
+  display: inline-block; }
+
+.actionCall--inlineBlock form {
+  display: inline-block; }
+
 @media only screen and (max-width: 768px) {
+  .presentation__article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "img" "title" "textCard"; }
+    .presentation__article img {
+      width: 90vw;
+      height: 20rem;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 1em; }
   .product__article {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -442,12 +446,6 @@ footer {
       border-radius: 15px 15px 0px 0px; }
     .product__article h4 {
       border-radius: 0px; } }
-
-.actionCall--inlineBlock h4 {
-  display: inline-block; }
-
-.actionCall--inlineBlock form {
-  display: inline-block; }
 
 .cardQuienes {
   background-color: #373a40; }
@@ -481,6 +479,9 @@ footer {
     grid-area: textCard;
     align-items: center; }
 
+.actionCall__form--padding form {
+  padding-bottom: 1.8em; }
+
 @media only screen and (max-width: 768px) {
   .cardQuienes {
     grid-template-columns: 1fr;
@@ -493,13 +494,16 @@ footer {
       border-radius: 15px;
       object-position: top;
       border-top-right-radius: 15px;
-      border-top-left-radius: 15px; }
+      border-top-left-radius: 15px;
+      botder-bottom-right-radius: 0px; }
     .cardQuienes h4 {
       padding-left: .9em;
-      margin-bottom: 0em; }
+      margin-bottom: 0em;
+      border-radius: 0px; }
     .cardQuienes p {
       padding-top: 1em; }
   .divFundador {
+    margin: 4% 8%;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: "img" "title" "textCard"; }
@@ -513,9 +517,6 @@ footer {
     .divFundador h4 {
       padding: .2em 0em;
       margin-bottom: .4em; } }
-
-.actionCall__form--padding form {
-  padding-bottom: 1.8em; }
 
 .productContainer {
   padding-bottom: 3em;
@@ -573,6 +574,12 @@ footer {
   align-items: center; }
   .productContainer--flexColumn h3 {
     align-self: stretch; }
+
+@media only screen and (max-width: 768px) {
+  .productContainer p {
+    padding: 0em 2em; }
+  .productContainer__article {
+    margin: 1em 2em; } }
 
 .articleContainer {
   padding-bottom: 3em;

@@ -62,3 +62,15 @@
         align-self: stretch;
     }
 }
+
+// responsive pagina de productos
+@media only screen and (max-width: 768px) {
+    .productContainer {
+        p {
+            padding: 0em 2em;
+        }
+    }
+    .productContainer__article {
+        margin: 1em 2em;
+    }
+}
