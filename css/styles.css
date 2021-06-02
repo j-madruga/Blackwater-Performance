@@ -258,7 +258,9 @@
 .formContainer {
   margin: auto;
   background-color: #19d3da;
-  border-radius: 15px; }
+  border-radius: 15px;
+  padding-bottom: 1em;
+  margin-bottom: 2.25em; }
   .formContainer h4 {
     font-family: "Monserrat", sans-serif;
     font-size: 2.125rem;
@@ -540,7 +542,7 @@ footer {
       margin-bottom: .4em; } }
 
 .productContainer {
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   margin: 0% 3% 5% 3%; }
   .productContainer h3 {
     font-family: "Monserrat", sans-serif;
@@ -570,7 +572,8 @@ footer {
   justify-content: space-evenly; }
 
 .productContainer__article {
-  width: 23rem; }
+  width: 23rem;
+  margin-bottom: 2em; }
 
 .productContainer__article--wide {
   width: 30rem; }

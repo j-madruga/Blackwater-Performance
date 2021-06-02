@@ -1,7 +1,7 @@
 // div contenedor de productos mas titulo y texto
 .productContainer {
     @extend %darkContainer;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     margin: 0% 3% 5% 3%;
     h3 {
         @include textStyle($ffMonserrat, 3rem, normal, 900, white);
@@ -31,6 +31,7 @@
     @extend %displayFlexColumn;
     @extend %genericCard;
     width: 23rem;
+    margin-bottom: 2em;
 }
 .productContainer__article--animation {
     @extend %articleAnimation;
