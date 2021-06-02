@@ -2,7 +2,7 @@
 .productContainer {
     @extend %darkContainer;
     padding-bottom: 3em;
-    margin: 0% 4% 5% 4%;
+    margin: 0% 3% 5% 3%;
     h3 {
         @include textStyle($ffMonserrat, 3rem, normal, 900, white);
         text-align: center;
@@ -30,7 +30,7 @@
 .productContainer__article {
     @extend %displayFlexColumn;
     @extend %genericCard;
-    width: 21rem;
+    width: 23rem;
 }
 .productContainer__article--animation {
     @extend %articleAnimation;

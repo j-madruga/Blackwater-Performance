@@ -1,24 +1,19 @@
 .formContainer--custom {
-    width: 95%;
-    @extend %displayFlexColumn;
-    justify-content: center;
-    align-items: center;
     h4 {
         text-align: center;
-        padding: 1em;
-        margin: 0em;
-    };
-    form {
-        width: max-content;
-        div {
-            justify-content: center;
-            width: 100%;
-            }
-        .formContainer__div--custom {
-            justify-content: space-between;
-            label, select {
-                width: max-content;
-            }
+    }
+
+    .formContainer__select--custom {
+        width: 100%;
+        justify-content: space-between;
+        label {
+            width: fit-content;
+        }
+        input {
+            width: auto;
+        }
+        select {
+            width: 18.5rem;
         }
     }
 }

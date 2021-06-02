@@ -108,7 +108,7 @@
   box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
   border-radius: 15px; }
 
-.formContainer, .formContainer form, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer, .formContainer--custom {
+.formContainer, .formContainer form, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer {
   display: flex;
   flex-direction: column; }
 
@@ -541,7 +541,7 @@ footer {
 
 .productContainer {
   padding-bottom: 3em;
-  margin: 0% 4% 5% 4%; }
+  margin: 0% 3% 5% 3%; }
   .productContainer h3 {
     font-family: "Monserrat", sans-serif;
     font-size: 3rem;
@@ -570,7 +570,7 @@ footer {
   justify-content: space-evenly; }
 
 .productContainer__article {
-  width: 21rem; }
+  width: 23rem; }
 
 .productContainer__article--wide {
   width: 30rem; }
@@ -604,7 +604,7 @@ footer {
 
 .articleContainer {
   padding-bottom: 3em;
-  margin: 0% 3% 5% 3%; }
+  margin: 0% 2% 5% 2%; }
   .articleContainer h3 {
     font-family: "Monserrat", sans-serif;
     font-size: 3rem;
@@ -621,10 +621,13 @@ footer {
   justify-content: space-between; }
 
 .articleCard {
-  justify-content: space-around;
-  width: 29vw; }
+  justify-content: space-between;
+  width: 23.8rem;
+  margin: 0 auto 2em auto; }
   .articleCard img {
     height: 12rem; }
+  .articleCard h4 {
+    margin-top: -.5em; }
   .articleCard span {
     font-style: italic;
     color: grey; }
@@ -660,20 +663,15 @@ footer {
     height: 2.7rem;
     margin-bottom: 1.5em; }
 
-.formContainer--custom {
-  width: 95%;
-  justify-content: center;
-  align-items: center; }
-  .formContainer--custom h4 {
-    text-align: center;
-    padding: 1em;
-    margin: 0em; }
-  .formContainer--custom form {
-    width: max-content; }
-    .formContainer--custom form div {
-      justify-content: center;
-      width: 100%; }
-    .formContainer--custom form .formContainer__div--custom {
-      justify-content: space-between; }
-      .formContainer--custom form .formContainer__div--custom label, .formContainer--custom form .formContainer__div--custom select {
-        width: max-content; }
+.formContainer--custom h4 {
+  text-align: center; }
+
+.formContainer--custom .formContainer__select--custom {
+  width: 100%;
+  justify-content: space-between; }
+  .formContainer--custom .formContainer__select--custom label {
+    width: fit-content; }
+  .formContainer--custom .formContainer__select--custom input {
+    width: auto; }
+  .formContainer--custom .formContainer__select--custom select {
+    width: 18.5rem; }
