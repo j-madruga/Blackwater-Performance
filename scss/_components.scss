@@ -199,7 +199,7 @@
                 padding: 1em;
                 letter-spacing: 2px;
                 border-radius: 15px;
-                width: 48rem;
+                width: 48em;
                 height: 12rem;
                 border: none;
             }
@@ -211,7 +211,33 @@
         }  
     }   
 }
-
+@media only screen and (max-width: 768px) {
+    .formContainer {
+        width: 90%;
+        form {
+            width: 75vw;
+            margin: 0% auto;
+            align-items: flex-start;
+            div {
+                margin: auto;
+                input {
+                    margin-right: 5em;
+                    margin-bottom: .5em;
+                }
+                textarea {
+                    margin-top: .4em;
+                    margin-bottom: .4em;
+                    width: 36em;
+                }
+            }
+            .form__div--submit {
+                margin-left: 0%;
+                width: 75vw;
+                align-self: flex-start;
+            }
+        }
+    }
+}
 
 // ----------------------------------------------------------------------------------
 // footer
