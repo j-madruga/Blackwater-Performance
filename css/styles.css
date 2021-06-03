@@ -259,13 +259,8 @@
   margin: auto;
   background-color: #19d3da;
   border-radius: 15px;
-<<<<<<< HEAD
-  padding-bottom: 1em;
-  margin-bottom: 2.25em; }
-=======
   justify-items: center;
   width: 90vw; }
->>>>>>> responsive-768px
   .formContainer h4 {
     font-family: "Monserrat", sans-serif;
     font-size: 2.125rem;
@@ -691,35 +686,9 @@ footer {
     font-weight: 900;
     color: #19d3da; }
   .blogLinkContainer img {
-<<<<<<< HEAD
-    height: 2.7rem;
-    margin-bottom: 1.5em; }
-
-.formContainer--custom {
-  width: 95%;
-  align-items: center; }
-  .formContainer--custom h4 {
-    text-align: center; }
-  .formContainer--custom form {
-    width: fit-content; }
-    .formContainer--custom form .formContainer__select--custom {
-      width: 100%;
-      justify-content: space-between; }
-      .formContainer--custom form .formContainer__select--custom label {
-        width: fit-content; }
-      .formContainer--custom form .formContainer__select--custom input {
-        width: auto; }
-      .formContainer--custom form .formContainer__select--custom select {
-        width: 18.5rem; }
-
-@media only screen and (max-width: 768px) {
-  .formContainer--custom form {
-    width: 75vw; } }
-=======
     height: 2.5rem;
     margin-bottom: 1.8em; }
 
 @media only screen and (max-width: 768px) {
   .blogLinkContainer img {
     height: 2rem; } }
->>>>>>> responsive-768px
