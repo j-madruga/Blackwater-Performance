@@ -139,25 +139,49 @@
             <!-- formulario de sesiones personalizadas -->
                 <h4>DEJANOS TUS DATOS ASI TE CONTACTAMOS</h4>
                 <form action="">
-                    <div>
-                        <label for="name">NOMBRE</label>
-                        <input type="text" name="name" placeholder=" JUAN">
-                        <label for="apellido">APELLIDO</label>
-                        <input type="text" name="apellido" placeholder="PEREZ">
-                    </div>
-                    <div>
-                        <label for="email">E-MAIL</label>
-                        <input type="email" name="email" placeholder=" MIMAIL@MAIL.COM">
-                        <label for="numTel">TELEFONO</label>
-                        <input type="tel" name="numTel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="011-15-1234-5678">
-                    </div>
-                    <div>
-                        <textarea name="consultaPers" placeholder=" CONTANOS UN POCO MAS (OPCIONAL)"></textarea>
-                    </div>
-                    <div class="form__div--submit">
-                        <input type="submit" class="form__submit" value="ENVIAR">
-                    </div>
-                </form>
+                    <!--datos personales del posible cliente-->
+                        <div class="formContainer__form--grid">
+                            <div class="form__div--nombre">
+                                <label for="nombre">NOMBRE</label>
+                                <input type="text" name="nombre" placeholder=" JUAN">
+                            </div>
+                            <div class="form__div--apellido">
+                                <label for="apellido">APELLIDO</label>
+                                <input type="text" name="apellido" placeholder="PEREZ">
+                            </div>
+                            <div class="form__div--mail">
+                                <label for="email">E-MAIL</label>
+                                <input type="email" name="email" placeholder=" MIMAIL@MAIL.COM">
+                            </div>
+                            <div class="form__div--tel">
+                                <label for="numTel">TELEFONO</label>
+                                <input type="tel" name="numTel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="011-15-1234-5678">
+                            </div>
+                            <div class="form__div--selector">
+                                <label for="prodInt">PRODUCTO DE INTERES</label>
+                                <select name="prodInt">
+                                    <optgroup label="PLAN DE ENTRENAMIENTO">
+                                        <option value="planPers">PLAN PERSONALIZADO</option>
+                                        <option value="planHipert">PLAN DE HIPERTROFIA</option>
+                                        <option value="planDefin">PLAN DE DEFINICION</option>
+                                    </optgroup>
+                                    <optgroup label="CLASE GRUPAL">
+                                        <option value="crossfit">CROSSFIT</option>
+                                        <option value="funcionalOut">FUNCIONAL OUTDOOR</option>
+                                    </optgroup>
+                                    <optgroup label="SESIONES PERSONALIZADAS">
+                                        <option value="">ENTRENAMIENTO PERSONALIZADO</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="form__div--consulta">
+                                <textarea name="consultas" placeholder="CONTANOS UN POCO MAS (OPCIONAL)"></textarea>
+                            </div>
+                            <div class="form__div--submit">
+                                <input type="submit" value="ENVIAR" class="form__submit">
+                            </div>
+                        </div>
+                    </form>
             </div>
         </section>
     </main>
