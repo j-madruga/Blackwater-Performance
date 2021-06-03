@@ -61,9 +61,10 @@ $ffMonserrat: 'Monserrat', sans-serif;
     margin: 1% 4%;
     border-radius: 15px;
     img {
-        @include img(28rem, 15rem, cover, 15px);
+        @include img(28rem, max-content, cover, 15px);
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
+        align-self: stretch;
         grid-area: img;
     }
     h4 {
