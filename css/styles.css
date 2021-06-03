@@ -26,7 +26,8 @@
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     align-self: stretch;
-    grid-area: img; }
+    grid-area: img;
+    max-height: 18.66rem; }
   .product__article h4, .cardQuienes h4 {
     font-family: "Monserrat", sans-serif;
     font-size: 2rem;

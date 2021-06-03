@@ -66,6 +66,7 @@ $ffMonserrat: 'Monserrat', sans-serif;
         border-bottom-right-radius: 0px;
         align-self: stretch;
         grid-area: img;
+        max-height: 18.66rem;
     }
     h4 {
         @include textStyle($ffMonserrat, 2rem, normal, 800, $darkerGrey);
