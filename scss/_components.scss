@@ -155,12 +155,15 @@
     @extend %displayFlexColumn;
     background-color: $lightBlue;
     border-radius: 15px;
+    justify-items: center;
+    width: 90vw;
     h4 {
         @include textStyle($ffMonserrat, 2.125rem, normal, 900, $darkGrey);
         margin: 1em;
+        text-align: center;
     }
     p {
-        @include textStyle($ffLato, 1.5rem, normal, 600, whitesmoke);
+        @include textStyle($ffMonserrat, 1.5rem, normal, 800, whitesmoke);
         letter-spacing: .05em;
         padding-left: 4em;
         padding-right: 4em;
@@ -169,76 +172,99 @@
         text-align: center;
     }
     form {
-        @extend %displayFlexColumn;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        text-align: left;
-        div {
-            @extend %displayFlexRow;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-            label {
-                padding: 7px;
-                margin: 4px;
-                @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-                letter-spacing: 2px;
-                width: 8rem;
+        @extend %displayFlexRow;
+        justify-content: center;
+        .formContainer__form--grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas: 
+            "nombre apellido"
+            "mail tel"
+            "selector selector"
+            "consulta consulta"
+            "submit submit";
+            width: 80%;
+            justify-items: stretch;
+            text-align: left;
+            align-items: center;
+            .form__div--nombre {
+                grid-area: nombre;
             }
-            input, select {
-                padding: 7px;
-                border-radius: 10px;
-                margin: 4px;
-                width: 15rem;
-                @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-                letter-spacing: 2px;
-                border: none;
+            .form__div--apellido {
+                grid-area: apellido;
             }
-            textarea {
-                @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-                padding: 1em;
-                letter-spacing: 2px;
-                border-radius: 15px;
-                width: 48em;
-                height: 12rem;
-                border: none;
+            .form__div--mail {
+                grid-area: mail;
             }
-            .form__submit {
-                @extend %button;
-                @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
-                background-color: $darkGrey;
+            .form__div--tel {
+                grid-area: tel;
             }
-        }  
+            .form__div--selector {
+                grid-area: selector;
+                select {
+                    flex: 1;
+                    padding: 7px;
+                    border-radius: 10px;
+                    margin: 4px;
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                    letter-spacing: 2px;
+                    border: none;
+                }
+            }
+            .form__div--consulta {
+                grid-area: consulta;
+                textarea {
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                    padding: 1em;
+                    letter-spacing: 2px;
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 12rem;
+                    border: none;
+                }  
+            }
+            .form__div--submit {
+                grid-area: submit;
+                justify-self: center;
+                input {
+                    @extend %button;
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
+                    background-color: $darkGrey;
+                }
+            }
+            div {
+                @extend %displayFlexRow;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+                label {
+                    padding: 7px 1em 7px 0em;
+                    margin: 4px;
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                    letter-spacing: 2px;
+                }
+                input {
+                    flex-grow: 1;
+                    padding: 7px;
+                    border-radius: 10px;
+                    margin: 4px;
+                    // width: 15rem;
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                    letter-spacing: 2px;
+                    border: none;
+                }
+            }
+        }
     }   
 }
 @media only screen and (max-width: 768px) {
     .formContainer {
-        width: 90%;
-        form {
-            width: 75vw;
-            margin: 0% auto;
-            align-items: flex-start;
-            div {
-                margin: auto;
-                input {
-                    margin-right: 5em;
-                    margin-bottom: .5em;
-                }
-                textarea {
-                    margin-top: .4em;
-                    margin-bottom: .4em;
-                    width: 36em;
-                }
-            }
-            .form__div--submit {
-                margin-left: 0%;
-                width: 75vw;
-                align-self: flex-start;
-            }
+        p {
+            padding-left: 2em;
+            padding-right: 2em;
         }
     }
 }
-
 // ----------------------------------------------------------------------------------
 // footer
 // ----------------------------------------------------------------------------------
@@ -271,5 +297,17 @@ footer {
         text-align: center;
         padding: .5%;
         margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer__div--links {
+        padding: 3%;
+        padding-bottom: 1%;
+        ul {
+            img {
+                height: 50px;
+            }
+        }
     }
 }

@@ -108,15 +108,15 @@
   box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
   border-radius: 15px; }
 
-.formContainer, .formContainer form, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer {
+.formContainer, .presentation--display, .product--display, .productContainer__article, .productContainer--flexColumn, .articleContainer, .articleCard, .blogLinkContainer {
   display: flex;
   flex-direction: column; }
 
-.actionCall--flexRow, .formContainer form div, .productContainer--flex, .cardContainer--flex {
+.actionCall--flexRow, .formContainer form, .formContainer form .formContainer__form--grid div, .productContainer--flex, .cardContainer--flex {
   display: flex;
   flex-flow: row wrap; }
 
-.actionCall .actionCall__submit, .formContainer form div .form__submit, .articleCard div a {
+.actionCall .actionCall__submit, .formContainer form .formContainer__form--grid .form__div--submit input, .articleCard div a {
   font-family: "Monserrat", sans-serif;
   font-size: 0.9rem;
   font-style: normal;
@@ -258,19 +258,22 @@
 .formContainer {
   margin: auto;
   background-color: #19d3da;
-  border-radius: 15px; }
+  border-radius: 15px;
+  justify-items: center;
+  width: 90vw; }
   .formContainer h4 {
     font-family: "Monserrat", sans-serif;
     font-size: 2.125rem;
     font-style: normal;
     font-weight: 900;
     color: #373a40;
-    margin: 1em; }
+    margin: 1em;
+    text-align: center; }
   .formContainer p {
-    font-family: "Lato", sans-serif;
+    font-family: "Monserrat", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
     color: whitesmoke;
     letter-spacing: .05em;
     padding-left: 4em;
@@ -279,75 +282,91 @@
     text-transform: uppercase;
     text-align: center; }
   .formContainer form {
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    text-align: left; }
-    .formContainer form div {
-      flex-wrap: wrap;
-      margin-bottom: 1rem; }
-      .formContainer form div label {
-        padding: 7px;
-        margin: 4px;
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: #373a40;
-        letter-spacing: 2px;
-        width: 8rem; }
-      .formContainer form div input, .formContainer form div select {
-        padding: 7px;
-        border-radius: 10px;
-        margin: 4px;
-        width: 15rem;
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: #373a40;
-        letter-spacing: 2px;
-        border: none; }
-      .formContainer form div textarea {
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: #373a40;
-        padding: 1em;
-        letter-spacing: 2px;
-        border-radius: 15px;
-        width: 48em;
-        height: 12rem;
-        border: none; }
-      .formContainer form div .form__submit {
-        font-family: "Monserrat", sans-serif;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 800;
-        color: whitesmoke;
-        background-color: #373a40; }
+    justify-content: center; }
+    .formContainer form .formContainer__form--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "nombre apellido" "mail tel" "selector selector" "consulta consulta" "submit submit";
+      width: 80%;
+      justify-items: stretch;
+      text-align: left;
+      align-items: center; }
+      .formContainer form .formContainer__form--grid .form__div--nombre {
+        grid-area: nombre; }
+      .formContainer form .formContainer__form--grid .form__div--apellido {
+        grid-area: apellido; }
+      .formContainer form .formContainer__form--grid .form__div--mail {
+        grid-area: mail; }
+      .formContainer form .formContainer__form--grid .form__div--tel {
+        grid-area: tel; }
+      .formContainer form .formContainer__form--grid .form__div--selector {
+        grid-area: selector; }
+        .formContainer form .formContainer__form--grid .form__div--selector select {
+          flex: 1;
+          padding: 7px;
+          border-radius: 10px;
+          margin: 4px;
+          font-family: "Monserrat", sans-serif;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 800;
+          color: #373a40;
+          letter-spacing: 2px;
+          border: none; }
+      .formContainer form .formContainer__form--grid .form__div--consulta {
+        grid-area: consulta; }
+        .formContainer form .formContainer__form--grid .form__div--consulta textarea {
+          font-family: "Monserrat", sans-serif;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 800;
+          color: #373a40;
+          padding: 1em;
+          letter-spacing: 2px;
+          border-radius: 15px;
+          width: 100%;
+          height: 12rem;
+          border: none; }
+      .formContainer form .formContainer__form--grid .form__div--submit {
+        grid-area: submit;
+        justify-self: center; }
+        .formContainer form .formContainer__form--grid .form__div--submit input {
+          font-family: "Monserrat", sans-serif;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 800;
+          color: whitesmoke;
+          background-color: #373a40; }
+      .formContainer form .formContainer__form--grid div {
+        justify-content: space-between;
+        margin-bottom: 1rem; }
+        .formContainer form .formContainer__form--grid div label {
+          padding: 7px 1em 7px 0em;
+          margin: 4px;
+          font-family: "Monserrat", sans-serif;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 800;
+          color: #373a40;
+          letter-spacing: 2px; }
+        .formContainer form .formContainer__form--grid div input {
+          flex-grow: 1;
+          padding: 7px;
+          border-radius: 10px;
+          margin: 4px;
+          font-family: "Monserrat", sans-serif;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 800;
+          color: #373a40;
+          letter-spacing: 2px;
+          border: none; }
 
 @media only screen and (max-width: 768px) {
-  .formContainer {
-    width: 90%; }
-    .formContainer form {
-      width: 75vw;
-      margin: 0% auto;
-      align-items: flex-start; }
-      .formContainer form div {
-        margin: auto; }
-        .formContainer form div input {
-          margin-right: 5em;
-          margin-bottom: .5em; }
-        .formContainer form div textarea {
-          margin-top: .4em;
-          margin-bottom: .4em;
-          width: 36em; }
-      .formContainer form .form__div--submit {
-        margin-left: 0%;
-        width: 75vw;
-        align-self: flex-start; } }
+  .formContainer p {
+    padding-left: 2em;
+    padding-right: 2em; } }
 
 footer {
   margin-top: 5rem;
@@ -378,6 +397,13 @@ footer {
   text-align: center;
   padding: .5%;
   margin-bottom: 0; }
+
+@media only screen and (max-width: 768px) {
+  .footer__div--links {
+    padding: 3%;
+    padding-bottom: 1%; }
+    .footer__div--links ul img {
+      height: 50px; } }
 
 .presentation--display {
   justify-content: center;
@@ -516,7 +542,7 @@ footer {
       object-position: top;
       border-top-right-radius: 15px;
       border-top-left-radius: 15px;
-      botder-bottom-right-radius: 0px; }
+      border-bottom-right-radius: 0px; }
     .cardQuienes h4 {
       padding-left: .9em;
       margin-bottom: 0em;
@@ -603,7 +629,6 @@ footer {
     margin: 1em 2em; } }
 
 .articleContainer {
-  padding-bottom: 3em;
   margin: 0% 2% 5% 2%; }
   .articleContainer h3 {
     font-family: "Monserrat", sans-serif;
@@ -655,23 +680,14 @@ footer {
     padding: .7em;
     margin: 0%;
     font-family: "Monserrat", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-style: normal;
     font-weight: 900;
     color: #19d3da; }
   .blogLinkContainer img {
-    height: 2.7rem;
-    margin-bottom: 1.5em; }
+    height: 2.5rem;
+    margin-bottom: 1.8em; }
 
-.formContainer--custom h4 {
-  text-align: center; }
-
-.formContainer--custom .formContainer__select--custom {
-  width: 100%;
-  justify-content: space-between; }
-  .formContainer--custom .formContainer__select--custom label {
-    width: fit-content; }
-  .formContainer--custom .formContainer__select--custom input {
-    width: auto; }
-  .formContainer--custom .formContainer__select--custom select {
-    width: 18.5rem; }
+@media only screen and (max-width: 768px) {
+  .blogLinkContainer img {
+    height: 2rem; } }
