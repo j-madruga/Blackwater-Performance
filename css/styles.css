@@ -5,8 +5,8 @@
 
 .presentation__article, .product__article, .cardQuienes {
   display: grid;
-  grid-template-columns: max-content auto;
-  grid-template-rows: max-content auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: min-content auto;
   grid-template-areas: "img title" "img textCard"; }
   .presentation__article img, .product__article img, .cardQuienes img {
     grid-area: img; }
@@ -20,7 +20,7 @@
   border-radius: 15px; }
   .product__article img, .cardQuienes img {
     width: 28rem;
-    height: max-content;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     border-top-right-radius: 0px;
@@ -35,10 +35,11 @@
     color: #2e3035;
     padding: .4em;
     padding-left: 2rem;
-    margin-bottom: .8em;
+    margin: 0em;
     grid-area: title;
     background-color: #19d3da;
-    border-top-right-radius: 15px; }
+    border-top-right-radius: 15px;
+    height: min-content; }
   .product__article p, .cardQuienes p {
     font-family: "Lato", sans-serif;
     font-size: 1.1rem;

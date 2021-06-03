@@ -91,8 +91,8 @@
     // responsive de cards de productos del index
     .product__article {
         grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "img" "title" "textCard";
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "img" "title" "textCard";
     img {
         @include img(100%, 15rem, cover, 15px);
         border-radius: 15px 15px 0px 0px;

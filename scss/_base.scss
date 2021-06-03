@@ -43,8 +43,8 @@ $ffMonserrat: 'Monserrat', sans-serif;
 // layout de articulo (grid)
 %articleGridLayout {
     display: grid;
-    grid-template-columns: max-content auto;
-    grid-template-rows: max-content auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content auto;
     grid-template-areas: "img title" "img textCard";
     img {
         grid-area: img;
@@ -61,7 +61,7 @@ $ffMonserrat: 'Monserrat', sans-serif;
     margin: 1% 4%;
     border-radius: 15px;
     img {
-        @include img(28rem, max-content, cover, 15px);
+        @include img(28rem, auto, cover, 15px);
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         align-self: stretch;
@@ -71,10 +71,11 @@ $ffMonserrat: 'Monserrat', sans-serif;
         @include textStyle($ffMonserrat, 2rem, normal, 800, $darkerGrey);
         padding: .4em;
         padding-left: 2rem;
-        margin-bottom: .8em;
+        margin: 0em;
         grid-area: title;
         background-color: $lightBlue;
         border-top-right-radius: 15px;
+        height: min-content;
     }
     p {
         @include textStyle($ffLato, 1.1rem, normal, 500, $darkGrey);
