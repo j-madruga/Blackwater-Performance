@@ -58,7 +58,7 @@ $ffMonserrat: 'Monserrat', sans-serif;
 }
 // estilo de articulos
 %articleStyle {
-    margin: 1% 4%;
+    margin: 1% 4% 2% 4%;
     border-radius: 15px;
     img {
         @include img(28rem, auto, cover, 15px);

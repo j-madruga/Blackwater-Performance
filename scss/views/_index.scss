@@ -31,12 +31,13 @@
     "textCard img";
 }
 // Estilo seccion de productos
+// contenedor de cards de productos
 .product--display {
     @extend %displayFlexColumn;
     justify-content: center;
     @extend %darkContainer;
     padding-bottom: 3em;
-    margin: 0% 4% 5% 4%;
+    margin: 0% 4% 5.25% 4%;
     h3 {
         @include textStyle($ffMonserrat, 3rem, normal, 900, white);
         text-align: center;
@@ -88,11 +89,15 @@
             margin-bottom: 1em;
         }
     }
+    .product--display {
+        padding-bottom: 1em;
+    }
     // responsive de cards de productos del index
     .product__article {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas: "img" "title" "textCard";
+        margin-bottom: 5%;
     img {
         @include img(100%, 15rem, cover, 15px);
         border-radius: 15px 15px 0px 0px;
