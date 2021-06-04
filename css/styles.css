@@ -233,8 +233,7 @@
     .banner__titulo p {
       font-size: 2rem;
       letter-spacing: .1em;
-      padding: 0em;
-      padding-left: .4em; }
+      padding: 0em; }
     .banner__titulo .banner__subtitle--page {
       font-size: 1.6rem;
       letter-spacing: .1em;
