@@ -239,7 +239,8 @@
       font-size: 1.6rem;
       letter-spacing: .1em;
       padding: 0em;
-      padding-left: .4em; } }
+      padding-left: .4em;
+      width: 100%; } }
 
 .actionCall--flexRow {
   justify-content: center;
