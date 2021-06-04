@@ -88,6 +88,9 @@
             @include img(90vw, 20rem, cover, 15px);
             margin-bottom: 1em;
         }
+        p {
+            padding-top: 0em;
+        }
     }
     .product--display {
         padding-bottom: 1em;
@@ -98,12 +101,38 @@
         grid-template-rows: auto auto auto;
         grid-template-areas: "img" "title" "textCard";
         margin-bottom: 5%;
-    img {
-        @include img(100%, 15rem, cover, 15px);
-        border-radius: 15px 15px 0px 0px;
+        img {
+            @include img(100%, 15rem, cover, 15px);
+            border-radius: 15px 15px 0px 0px;
+            }
+        h4 {
+            border-radius: 0px;
+            }
         }
-    h4 {
-        border-radius: 0px;
+        p {
+            padding-top: 1em;
         }
+}
+@media only screen and (min-width:360px) and (max-width:600px) {
+    .product--display {
+        h3 {
+            font-size: 2.25em;
+        }
+        padding-bottom: 0em;
+    }
+    .product__article {
+        width: 85vw;
+        margin-bottom: 2em;
+        img {
+            @include img(85vw, 15rem, cover, 15px);
+            border-radius: 15px 15px 0px 0px;
+        }
+        h4 {
+            width: 85vw;
+            padding: .4em;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
     }
 }
