@@ -58,27 +58,36 @@
     @extend %articleAnimation:hover;
 }
 .blogLinkContainer {
-    @extend %darkContainer;
+    @extend .actionCall; 
     @extend %displayFlexColumn;
     @extend %articleAnimation;
     align-items: center;
     justify-content: center;
-    margin: 3.5% 10%;
+    margin: 3% 25%;
     h4 {
-        padding: .7em;
-        margin: 0%;
-        @include textStyle($ffMonserrat, 2.7rem, normal, 900, $lightBlue);
+        padding: .3em;
+        font-size: 2.5rem;
     }
     img {
-        height: 2.5rem;
-        margin-bottom: 1.8em;
+        height: 2.125rem;
+        margin-bottom: 1em;
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 740px) {
     .blogLinkContainer {
+        h4 {
+            font-size: 2rem;
+            padding: .5em 0em;
+        }
+    }
+}
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+    .blogLinkContainer {
+        margin: 3%;
         img {
-            height: 2rem;
+            height: 1.8rem;
+            margin-bottom: 1.1em;
         }
     }
 }

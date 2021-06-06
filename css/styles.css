@@ -101,7 +101,7 @@
   background: #031b21;
   background: linear-gradient(42deg, #031b21 0%, #0aa0c5 47%, #19d3da 100%); }
 
-.actionCall, .product--display, .productContainer, .blogLinkContainer {
+.actionCall, .blogLinkContainer, .product--display, .productContainer {
   background-color: #373a40;
   box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
   border-radius: 15px; }
@@ -119,7 +119,7 @@
   display: flex;
   flex-flow: row wrap; }
 
-.actionCall .actionCall__submit, .formContainer form .formContainer__form--grid .form__div--submit input, .articleCard div a {
+.actionCall .actionCall__submit, .blogLinkContainer .actionCall__submit, .formContainer form .formContainer__form--grid .form__div--submit input, .articleCard div a {
   font-family: "Monserrat", sans-serif;
   font-size: 0.9rem;
   font-style: normal;
@@ -143,7 +143,7 @@
   font-weight: 800;
   color: #373a40; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   nav {
     padding-right: 2em; }
     nav .nav__links a {
@@ -216,7 +216,7 @@
   position: absolute;
   background: rgba(0, 0, 0, 0.45); }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   .banner__titulo h1 {
     font-size: 6.5rem; }
   .banner__titulo p {
@@ -246,10 +246,10 @@
   justify-content: center;
   align-items: center; }
 
-.actionCall {
+.actionCall, .blogLinkContainer {
   margin: 3.5% 10%;
   text-align: center; }
-  .actionCall h4 {
+  .actionCall h4, .blogLinkContainer h4 {
     padding: .7em;
     margin: 0%;
     font-family: "Monserrat", sans-serif;
@@ -257,7 +257,7 @@
     font-style: normal;
     font-weight: 900;
     color: #19d3da; }
-  .actionCall input {
+  .actionCall input, .blogLinkContainer input {
     padding: 4px;
     border-radius: 10px;
     margin: 4px;
@@ -269,7 +269,7 @@
     color: #373a40;
     letter-spacing: 2px;
     border: none; }
-  .actionCall .actionCall__submit {
+  .actionCall .actionCall__submit, .blogLinkContainer .actionCall__submit {
     background-color: #19d3da; }
 
 .actionCall--animation:hover h4 {
@@ -278,20 +278,20 @@
 .actionCall--animation:hover .actionCall__submit {
   background-color: #2e3035; }
 
-@media only screen and (max-width: 768px) {
-  .actionCall h4 {
+@media only screen and (max-width: 740px) {
+  .actionCall h4, .blogLinkContainer h4 {
     padding-bottom: .2em; }
-  .actionCall form {
+  .actionCall form, .blogLinkContainer form {
     margin-bottom: 1.75em; } }
 
 @media only screen and (min-width: 360px) and (max-width: 600px) {
-  .actionCall h4 {
+  .actionCall h4, .blogLinkContainer h4 {
     font-size: 2em;
     padding-bottom: .5em; }
-  .actionCall form {
+  .actionCall form, .blogLinkContainer form {
     width: 80vw;
     margin-bottom: 1.125em; }
-    .actionCall form input {
+    .actionCall form input, .blogLinkContainer form input {
       width: 60vw;
       margin-bottom: .5em; } }
 
@@ -403,7 +403,7 @@
           color: whitesmoke;
           background-color: #373a40; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   .formContainer p {
     padding-left: 2em;
     padding-right: 2em; }
@@ -473,7 +473,7 @@ footer {
   padding: .5%;
   margin-bottom: 0; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   .footer__div ul .footer__div--flex .footer__div--logo img {
     height: 50px; }
   .footer__div ul .footer__div--flex .footer__div--links img {
@@ -557,7 +557,7 @@ footer {
 .actionCall--inlineBlock form {
   display: inline-block; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   .presentation__article {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -644,7 +644,7 @@ footer {
 .actionCall__form--padding form {
   padding-bottom: 1.85em; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   .cardQuienes {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -742,7 +742,7 @@ footer {
   .productContainer--flexColumn h3 {
     align-self: stretch; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 740px) {
   .productContainer p {
     padding: 0em 2em; }
   .productContainer__article {
@@ -805,19 +805,22 @@ footer {
 .blogLinkContainer {
   align-items: center;
   justify-content: center;
-  margin: 3.5% 10%; }
+  margin: 3% 25%; }
   .blogLinkContainer h4 {
-    padding: .7em;
-    margin: 0%;
-    font-family: "Monserrat", sans-serif;
-    font-size: 2.7rem;
-    font-style: normal;
-    font-weight: 900;
-    color: #19d3da; }
+    padding: .3em;
+    font-size: 2.5rem; }
   .blogLinkContainer img {
-    height: 2.5rem;
-    margin-bottom: 1.8em; }
+    height: 2.125rem;
+    margin-bottom: 1em; }
 
-@media only screen and (max-width: 768px) {
-  .blogLinkContainer img {
-    height: 2rem; } }
+@media only screen and (max-width: 740px) {
+  .blogLinkContainer h4 {
+    font-size: 2rem;
+    padding: .5em 0em; } }
+
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+  .blogLinkContainer {
+    margin: 3%; }
+    .blogLinkContainer img {
+      height: 1.8rem;
+      margin-bottom: 1.1em; } }
