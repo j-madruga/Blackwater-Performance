@@ -75,3 +75,21 @@
         margin: 1em 2em;
     }
 }
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+    .productContainer {
+        h3 {
+            font-size: 1.8em;
+        }
+        p {
+            margin-top: 2em;
+        }
+    }
+    .productContainer__article {
+        width: 85vw;
+    }
+    .productContainer__article--wide {
+        img {
+            width: 85vw;
+        }
+    }
+}

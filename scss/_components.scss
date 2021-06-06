@@ -114,8 +114,9 @@
             font-size: 1.6rem;
             letter-spacing: .1em;
             padding: 0em;
-            padding-left: .4em;
+            padding-left: .1em;
             width: 100%;
+            margin-right: 0em;
         }
     }
 }
@@ -235,51 +236,6 @@
             justify-items: stretch;
             text-align: left;
             align-items: center;
-            .form__div--nombre {
-                grid-area: nombre;
-            }
-            .form__div--apellido {
-                grid-area: apellido;
-            }
-            .form__div--mail {
-                grid-area: mail;
-            }
-            .form__div--tel {
-                grid-area: tel;
-            }
-            .form__div--selector {
-                grid-area: selector;
-                select {
-                    flex: 1;
-                    padding: 7px;
-                    border-radius: 10px;
-                    margin: 4px;
-                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-                    letter-spacing: 2px;
-                    border: none;
-                }
-            }
-            .form__div--consulta {
-                grid-area: consulta;
-                textarea {
-                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
-                    padding: 1em;
-                    letter-spacing: 2px;
-                    border-radius: 15px;
-                    width: 100%;
-                    height: 12rem;
-                    border: none;
-                }  
-            }
-            .form__div--submit {
-                grid-area: submit;
-                justify-self: center;
-                input {
-                    @extend %button;
-                    @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
-                    background-color: $darkGrey;
-                }
-            }
             div {
                 @extend %displayFlexRow;
                 justify-content: space-between;
@@ -295,10 +251,54 @@
                     padding: 7px;
                     border-radius: 10px;
                     margin: 4px;
-                    // width: 15rem;
                     @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
                     letter-spacing: 2px;
                     border: none;
+                }
+                select {
+                    flex: 1;
+                    padding: 7px;
+                    border-radius: 10px;
+                    margin: 4px;
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                    letter-spacing: 2px;
+                    border: none;
+                }
+                textarea {
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, $darkGrey);
+                    padding: 1em;
+                    letter-spacing: 2px;
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 12rem;
+                    border: none;
+                }  
+            }
+            .form__div--nombre {
+                grid-area: nombre;
+            }
+            .form__div--apellido {
+                grid-area: apellido;
+            }
+            .form__div--mail {
+                grid-area: mail;
+            }
+            .form__div--tel {
+                grid-area: tel;
+            }
+            .form__div--selector {
+                grid-area: selector;
+            }
+            .form__div--consulta {
+                grid-area: consulta;
+            }
+            .form__div--submit {
+                grid-area: submit;
+                justify-self: center;
+                input {
+                    @extend %button;
+                    @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
+                    background-color: $darkGrey;
                 }
             }
         }
@@ -306,12 +306,59 @@
 }
 @media only screen and (max-width: 768px) {
     .formContainer {
+        
         p {
             padding-left: 2em;
             padding-right: 2em;
         }
+        form {
+            .formContainer__form--grid {
+                width: 90%;
+            }
+        }
     }
 }
+@media only screen and (min-width:360px) and (max-width:600px) {
+    .formContainer {
+        h4 {
+            font-size: 1.8em;
+            text-align: left;
+            margin-left: .5em;
+        }
+        p {
+            font-size: 1rem;
+            text-align: left;
+            padding-left: 1em;
+            margin-top: -1rem;
+        }
+        form {
+            .formContainer__form--grid {
+                width: 95%;
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto auto auto auto;
+                grid-template-areas: 
+                "nombre"
+                "apellido"
+                "mail"
+                "tel"
+                "selector"
+                "consulta"
+                "submit";
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    select {
+                        width: 98%;
+                    }
+                    select {
+                        width: 98%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // ----------------------------------------------------------------------------------
 // footer
 // ----------------------------------------------------------------------------------
