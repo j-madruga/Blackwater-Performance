@@ -21,7 +21,7 @@
         text-align: justify;
     }
 }
-
+// card de seccion de presentacion que tiene los elementos (img, titulo, p) en orden inverso 
 .presentation__article--backward {
     display: grid;
     grid-template-columns: auto 25rem;
@@ -30,6 +30,7 @@
     "title img"
     "textCard img";
 }
+
 // Estilo seccion de productos
 // contenedor de cards de productos
 .product--display {
@@ -77,7 +78,7 @@
     }
 }
 
-// responsive del index
+// responsive de index.html hasta 800px
 @media only screen and (max-width: 800px) {
     // responsive de seccion de presentacion
     .presentation__article {
@@ -95,7 +96,7 @@
     .product--display {
         padding-bottom: 1em;
     }
-    // responsive de cards de productos del index
+    // responsive de cards de productos de index.html
     .product__article {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
@@ -113,6 +114,7 @@
             padding-top: 1em;
         }
 }
+// responsive de index.html hasta 600px 
 @media only screen and (min-width:360px) and (max-width:600px) {
     .product--display {
         h3 {

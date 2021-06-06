@@ -64,7 +64,6 @@
     }
 }
 
-// responsive pagina de productos
 @media only screen and (max-width: 800px) {
     .productContainer {
         p {
@@ -75,6 +74,7 @@
         margin: 1em 2em;
     }
 }
+// responsive pagina de productos.html hasta 600px
 @media only screen and (min-width: 360px) and (max-width: 600px) {
     .productContainer {
         h3 {

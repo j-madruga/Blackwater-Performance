@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------------
-// barra de navegación
+//  NAVBAR
 // ----------------------------------------------------------------------------------
 .nav__logo--size {
     height: 70px;
@@ -16,6 +16,7 @@
         @include textStyle($ffLato, 1.3rem, normal, 800, $darkGrey);
     }
 }
+// responsive de barra de navegacion hasta 800px 
 @media only screen and (max-width: 800px) {
     nav {
         padding-right: 0em;
@@ -26,6 +27,7 @@
         }
     }
 }
+// responsive de barra de navegacion hasta 600px 
 @media only screen and (min-width:360px) and (max-width:600px) {
     .nav__logo--size {
         width: 200px;
@@ -36,9 +38,11 @@
         padding-right: 0em;
     }
 }
+
 // ----------------------------------------------------------------------------------
-// banner principal
+// BANNER PRINCIPAL
 // ----------------------------------------------------------------------------------
+// estilo del banner principal 
 .banner__titulo {
     background-image: url(../img/box-cross-banner.jpg);
     background-size: cover;
@@ -64,6 +68,7 @@
         z-index: 1;
     }
     .banner__subtitle--page {
+        // subtitulo que indica en que pagina de sitio se esta ubicado 
         @include textStyle($ffLato, 3.5rem, initial, 900, $lightBlue);
         display: inline;
         letter-spacing: .3em;
@@ -79,12 +84,14 @@
     }
 }
 .banner__titulo::before {
+    // pseudoelmento que da el overlay oscuro al banner principal 
     content: " ";
     width: 100%;
     height: 100%;
     position: absolute;
     background: rgba(0,0,0,0.45);
 }
+// responsive del banner principal hasta 800px 
 @media only screen and (max-width: 800px) {
     .banner__titulo {
         h1 {
@@ -98,6 +105,7 @@
         }
     }
 }
+// responsive del banner principal hasta 600px 
 @media only screen and (min-width:360px) and (max-width:600px) {
     .banner__titulo {
         margin-top: 4.3rem;
@@ -121,7 +129,7 @@
     }
 }
 // ----------------------------------------------------------------------------------
-// call to action
+// CALL TO ACTION
 // ----------------------------------------------------------------------------------
 // layout del call to action -----
 .actionCall--flexRow {
@@ -129,7 +137,6 @@
     justify-content: center;
     align-items: center;
 }
-
 // call to action container -----
 .actionCall {
     @extend %darkContainer;
@@ -168,6 +175,7 @@
         background-color: $darkerGrey;
     }
 }
+// responsive del call to action hasta 800px 
 @media only screen and (max-width: 800px) {
     .actionCall {
         h4 {
@@ -178,6 +186,7 @@
         }
     }
 }
+// responsive del call to action hasta 800px 
 @media only screen and (min-width:360px) and (max-width:600px) {
     .actionCall {
         h4 {
@@ -196,7 +205,7 @@
     }
 }
 // ----------------------------------------------------------------------------------
-// form
+// FORMULARIO PRINCIPAL
 // ----------------------------------------------------------------------------------
 .formContainer {
     margin: auto;
@@ -223,6 +232,7 @@
         @extend %displayFlexRow;
         justify-content: center;
         .formContainer__form--grid {
+        // contenerdor en el formulario al que se le aplica grid
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto auto auto auto;
@@ -237,6 +247,7 @@
             text-align: left;
             align-items: center;
             div {
+            // caracteristicas generales de divs que contienen labels e inputs/textarea/submit 
                 @extend %displayFlexRow;
                 justify-content: space-between;
                 margin-bottom: 1rem;
@@ -274,6 +285,7 @@
                     border: none;
                 }  
             }
+            // clase que diferencia los divs para poder asignarles un grid-area 
             .form__div--nombre {
                 grid-area: nombre;
             }
@@ -296,6 +308,7 @@
                 grid-area: submit;
                 justify-self: center;
                 input {
+                // boton de submit de formulario 
                     @extend %button;
                     @include textStyle($ffMonserrat, 1rem, normal, 800, whitesmoke);
                     background-color: $darkGrey;
@@ -304,6 +317,7 @@
         }
     }   
 }
+// responsive de formulario hasta 800px 
 @media only screen and (max-width: 800px) {
     .formContainer {
         
@@ -318,6 +332,7 @@
         }
     }
 }
+// responsive del formulario hasta 600px 
 @media only screen and (min-width:360px) and (max-width:600px) {
     .formContainer {
         h4 {
@@ -360,7 +375,7 @@
 }
 
 // ----------------------------------------------------------------------------------
-// footer
+// FOOTER
 // ----------------------------------------------------------------------------------
 footer {
     margin-top: 5rem;
@@ -403,6 +418,7 @@ footer {
         }
     }
 }
+// ultima linea del footer 
 .footer__div--bottom {
     p {
         @include textStyle($ffMonserrat, 1.3rem, italic, 500, whitesmoke);
@@ -411,7 +427,7 @@ footer {
         margin-bottom: 0;
     }
 }
-
+// responsive del footer hasta 800px 
 @media only screen and (max-width: 800px) {
     .footer__div ul {
         .footer__div--flex {
@@ -428,6 +444,7 @@ footer {
         }
     }
 }
+// responsive del footer hasta 600px 
 @media only screen and (min-width:360px) and (max-width:600px) {
     .footer__div ul {
         .footer__div--flex {
@@ -445,5 +462,10 @@ footer {
                 }
             }
         }
+    }
+}
+.footer__div--bottom {
+    p {
+        @include textStyle($ffMonserrat, 1rem, italic, 500, whitesmoke);
     }
 }

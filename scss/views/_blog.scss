@@ -1,3 +1,4 @@
+// contenedor de articulos del blog mas el titulo 
 .articleContainer {
     @extend %displayFlexColumn;
     margin: 0% 2% 5% 2%;
@@ -10,10 +11,12 @@
         border-radius: 15px;
     }
 }
+// contenedor de las cards con flex (cada card es un articulo) 
 .cardContainer--flex {
     @extend %displayFlexRow;
     justify-content: space-between;
 }
+// cards de articulos del blog 
 .articleCard {
     @extend %genericCard;
     @extend %lightContainer;
@@ -51,12 +54,15 @@
         }
     }
 }
+// animacion de las card 
 .articleCard--animation {
     @extend %articleAnimation;
 }
 .articleCard--animation:hover {
     @extend %articleAnimation:hover;
 }
+
+// call to action de pagina de blog 
 .blogLinkContainer {
     @extend .actionCall; 
     @extend %displayFlexColumn;
@@ -74,6 +80,7 @@
     }
 }
 
+// responsive de blog.html hasta 800px 
 @media only screen and (max-width: 800px) {
     .blogLinkContainer {
         h4 {
@@ -82,6 +89,7 @@
         }
     }
 }
+// responsive de blog.html hasta 600px 
 @media only screen and (min-width: 360px) and (max-width: 600px) {
     .blogLinkContainer {
         margin: 3%;

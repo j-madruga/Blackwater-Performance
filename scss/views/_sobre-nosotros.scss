@@ -8,6 +8,7 @@
     }
 }
 
+// estilo de seccion de presentación del fundador 
 .divFundador {
     @extend .presentation__article--backward;
     margin: 4% 12%;
@@ -30,13 +31,14 @@
     }
 }
 
+// clase modificadora de call to action de sobre-nosotros.html 
 .actionCall__form--padding {
     form {
         padding-bottom: 1.85em;
     }
 }
 
-// responsive pagina sobre nosotros
+// responsive pagina de sobre-nosotros.html hasta 800px
 @media only screen and (max-width: 800px) {
     .cardQuienes {
         grid-template-columns: 1fr;
@@ -74,7 +76,7 @@
         }
     }
 }
-
+// responsive pagina de sobre-nosotros.html hasta 600px
 @media only screen and (min-width:360px) and (max-width:600px) {
     .cardQuienes {
         img {

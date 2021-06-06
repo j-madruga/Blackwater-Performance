@@ -492,6 +492,13 @@ footer {
       .footer__div ul .footer__div--flex .footer__div--links img {
         height: 40px; } }
 
+.footer__div--bottom p {
+  font-family: "Monserrat", sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  color: whitesmoke; }
+
 .presentation--display {
   justify-content: center;
   margin: 5% 5%; }
