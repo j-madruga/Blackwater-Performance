@@ -143,9 +143,9 @@
   font-weight: 800;
   color: #373a40; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   nav {
-    padding-right: 2em; }
+    padding-right: 0em; }
     nav .nav__links a {
       font-family: "Lato", sans-serif;
       font-size: 0.9rem;
@@ -216,7 +216,7 @@
   position: absolute;
   background: rgba(0, 0, 0, 0.45); }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .banner__titulo h1 {
     font-size: 6.5rem; }
   .banner__titulo p {
@@ -278,7 +278,7 @@
 .actionCall--animation:hover .actionCall__submit {
   background-color: #2e3035; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .actionCall h4, .blogLinkContainer h4 {
     padding-bottom: .2em; }
   .actionCall form, .blogLinkContainer form {
@@ -403,7 +403,7 @@
           color: whitesmoke;
           background-color: #373a40; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .formContainer p {
     padding-left: 2em;
     padding-right: 2em; }
@@ -473,7 +473,7 @@ footer {
   padding: .5%;
   margin-bottom: 0; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .footer__div ul .footer__div--flex .footer__div--logo img {
     height: 50px; }
   .footer__div ul .footer__div--flex .footer__div--links img {
@@ -557,7 +557,7 @@ footer {
 .actionCall--inlineBlock form {
   display: inline-block; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .presentation__article {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -644,7 +644,7 @@ footer {
 .actionCall__form--padding form {
   padding-bottom: 1.85em; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .cardQuienes {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -742,7 +742,7 @@ footer {
   .productContainer--flexColumn h3 {
     align-self: stretch; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .productContainer p {
     padding: 0em 2em; }
   .productContainer__article {
@@ -813,7 +813,7 @@ footer {
     height: 2.125rem;
     margin-bottom: 1em; }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
   .blogLinkContainer h4 {
     font-size: 2rem;
     padding: .5em 0em; } }

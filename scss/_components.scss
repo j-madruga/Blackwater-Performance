@@ -16,9 +16,9 @@
         @include textStyle($ffLato, 1.3rem, normal, 800, $darkGrey);
     }
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     nav {
-        padding-right: 2em;
+        padding-right: 0em;
         .nav__links {
             a {
             @include textStyle($ffLato, .9rem, normal, 800, $darkGrey);
@@ -85,7 +85,7 @@
     position: absolute;
     background: rgba(0,0,0,0.45);
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     .banner__titulo {
         h1 {
             font-size: 6.5rem;
@@ -168,7 +168,7 @@
         background-color: $darkerGrey;
     }
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     .actionCall {
         h4 {
             padding-bottom: .2em;
@@ -304,7 +304,7 @@
         }
     }   
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     .formContainer {
         
         p {
@@ -412,7 +412,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     .footer__div ul {
         .footer__div--flex {
             .footer__div--logo {
