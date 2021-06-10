@@ -14,7 +14,7 @@ $darkBlue: #0aa0c5;
 $lightBlue: #19d3da;
 $lightGrey: #bbc0c9;
 $darkGrey: #373a40;
-$darkerGrey: #2e3035;
+$darkerGrey: #262627;
 $smokeyWhite: rgb(248, 248, 248);
 $ffLato: 'Lato', sans-serif;
 $ffMonserrat: 'Monserrat', sans-serif;
@@ -134,8 +134,8 @@ $ffMonserrat: 'Monserrat', sans-serif;
 // container oscuro
 // ----------------------------------------------------------------------------------
 %darkContainer {
-    background-color: $darkGrey;
-    box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
+    background-color: $darkerGrey;
+    box-shadow: 0em 0em 1.5em rgba(0, 0, 0, 0.45);
     border-radius: 15px;
 }
 // ----------------------------------------------------------------------------------

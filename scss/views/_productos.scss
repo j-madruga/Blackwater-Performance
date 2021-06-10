@@ -2,7 +2,8 @@
 .productContainer {
     @extend %darkContainer;
     padding-bottom: 1em;
-    margin: 0% 3% 5% 3%;
+    margin: 7% 3% 5% 3%;
+    box-shadow: none;
     h3 {
         @include textStyle($ffMonserrat, 3rem, normal, 900, white);
         text-align: center;
@@ -68,6 +69,7 @@
         p {
             padding: 0em 2em;
         }
+        margin-top: 5em;
     }
     .productContainer__article {
         margin: 1em 2em;
@@ -82,6 +84,7 @@
         p {
             margin-top: 2em;
         }
+        margin-top: 4em;
     }
     .productContainer__article {
         width: 85vw;
@@ -90,6 +93,18 @@
     .productContainer__article--wide {
         img {
             width: 85vw;
+        }
+    }
+}
+// responsive pagina de productos.html hasta 479px
+@media only screen and (max-width: 479px) {
+    .productContainer {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        padding-bottom: 2em;
+        h3 {
+            border-radius: 0;
         }
     }
 }

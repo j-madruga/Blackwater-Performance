@@ -84,3 +84,12 @@
         }
     }
 }
+// responsive pagina sobre-nosotros.html hasta 479px
+@media only screen and (max-width: 479px) {
+    .cardQuienes {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+
+}

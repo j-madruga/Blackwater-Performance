@@ -33,7 +33,7 @@
     font-size: 2rem;
     font-style: normal;
     font-weight: 800;
-    color: #2e3035;
+    color: #262627;
     padding: .4em;
     padding-left: 2rem;
     margin: 0em;
@@ -99,8 +99,8 @@
   background: linear-gradient(42deg, #031b21 0%, #0aa0c5 47%, #19d3da 100%); }
 
 .actionCall, .blogLinkContainer, .product--display, .productContainer {
-  background-color: #373a40;
-  box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.5);
+  background-color: #262627;
+  box-shadow: 0em 0em 1.5em rgba(0, 0, 0, 0.45);
   border-radius: 15px; }
 
 .articleCard {
@@ -270,10 +270,10 @@
     background-color: #19d3da; }
 
 .actionCall--animation:hover h4 {
-  color: #2e3035; }
+  color: #262627; }
 
 .actionCall--animation:hover .actionCall__submit {
-  background-color: #2e3035; }
+  background-color: #262627; }
 
 @media only screen and (max-width: 800px) {
   .actionCall h4, .blogLinkContainer h4 {
@@ -564,7 +564,8 @@ footer {
   .presentation__article {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "img" "title" "textCard"; }
+    grid-template-areas: "img" "title" "textCard";
+    margin-top: 3em; }
     .presentation__article img {
       width: 90vw;
       height: 20rem;
@@ -593,7 +594,9 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .product--display {
-    padding-bottom: 0em; }
+    padding-bottom: 0em;
+    margin-top: 2em;
+    box-shadow: none; }
     .product--display h3 {
       font-size: 2.25em; }
   .product__article {
@@ -609,7 +612,23 @@ footer {
       width: 85vw;
       padding: .4em;
       font-size: 1.6em;
-      text-align: center; } }
+      text-align: center; }
+  .actionCall, .blogLinkContainer {
+    margin-top: 3.5em; } }
+
+@media only screen and (max-width: 479px) {
+  .product--display {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0; }
+    .product--display h3 {
+      align-self: stretch;
+      border-radius: 0; }
+  .actionCall, .blogLinkContainer {
+    margin-top: 4em; } }
 
 .cardQuienes {
   background-color: #373a40; }
@@ -687,9 +706,16 @@ footer {
   .cardQuienes img {
     border-bottom-left-radius: 0px; } }
 
+@media only screen and (max-width: 479px) {
+  .cardQuienes {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0; } }
+
 .productContainer {
   padding-bottom: 1em;
-  margin: 0% 3% 5% 3%; }
+  margin: 7% 3% 5% 3%;
+  box-shadow: none; }
   .productContainer h3 {
     font-family: "Monserrat", sans-serif;
     font-size: 3rem;
@@ -745,21 +771,34 @@ footer {
     align-self: stretch; }
 
 @media only screen and (max-width: 800px) {
-  .productContainer p {
-    padding: 0em 2em; }
+  .productContainer {
+    margin-top: 5em; }
+    .productContainer p {
+      padding: 0em 2em; }
   .productContainer__article {
     margin: 1em 2em; } }
 
 @media only screen and (max-width: 600px) {
-  .productContainer h3 {
-    font-size: 1.8em; }
-  .productContainer p {
-    margin-top: 2em; }
+  .productContainer {
+    margin-top: 4em; }
+    .productContainer h3 {
+      font-size: 1.8em; }
+    .productContainer p {
+      margin-top: 2em; }
   .productContainer__article {
     width: 85vw;
     margin: 1em auto; }
   .productContainer__article--wide img {
     width: 85vw; } }
+
+@media only screen and (max-width: 479px) {
+  .productContainer {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    padding-bottom: 2em; }
+    .productContainer h3 {
+      border-radius: 0; } }
 
 .articleContainer {
   margin: 0% 2% 5% 2%; }
