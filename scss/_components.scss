@@ -28,7 +28,7 @@
     }
 }
 // responsive de barra de navegacion hasta 600px 
-@media only screen and (min-width:360px) and (max-width:600px) {
+@media only screen and (max-width:600px) {
     .nav__logo--size {
         width: 200px;
         height: auto;
@@ -106,7 +106,7 @@
     }
 }
 // responsive del banner principal hasta 600px 
-@media only screen and (min-width:360px) and (max-width:600px) {
+@media only screen and (max-width:600px) {
     .banner__titulo {
         margin-top: 4.3rem;
         height: 10rem;
@@ -187,7 +187,7 @@
     }
 }
 // responsive del call to action hasta 800px 
-@media only screen and (min-width:360px) and (max-width:600px) {
+@media only screen and (max-width:600px) {
     .actionCall {
         h4 {
             font-size: 2em;
@@ -333,7 +333,7 @@
     }
 }
 // responsive del formulario hasta 600px 
-@media only screen and (min-width:360px) and (max-width:600px) {
+@media only screen and (max-width:800px) {
     .formContainer {
         h4 {
             font-size: 1.8em;
@@ -445,7 +445,7 @@ footer {
     }
 }
 // responsive del footer hasta 600px 
-@media only screen and (min-width:360px) and (max-width:600px) {
+@media only screen and (max-width:600px) {
     .footer__div ul {
         .footer__div--flex {
             display: flex;
