@@ -18,7 +18,6 @@
     p {
         @include textStyle($ffMonserrat, 1.25rem, normal, 500, $darkGrey);
         letter-spacing: .08em;
-        text-align: justify;
     }
 }
 // card de seccion de presentacion que tiene los elementos (img, titulo, p) en orden inverso 

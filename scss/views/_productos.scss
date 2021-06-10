@@ -15,7 +15,6 @@
     p {
         @include textStyle($ffLato, 1.25rem, normal, 500, whitesmoke);
         letter-spacing: .05em;
-        text-align: justify;
         padding-left: 4em;
         padding-right: 4em;
         margin-bottom: 1.5em;
@@ -86,6 +85,7 @@
     }
     .productContainer__article {
         width: 85vw;
+        margin: 1em auto;
     }
     .productContainer__article--wide {
         img {

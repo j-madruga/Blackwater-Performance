@@ -48,7 +48,6 @@
     font-weight: 500;
     color: #373a40;
     letter-spacing: .05em;
-    text-align: justify;
     grid-area: textCard;
     padding-left: 2em;
     padding-right: 2em; }
@@ -78,7 +77,6 @@
     font-weight: 600;
     color: #373a40;
     letter-spacing: .03em;
-    text-align: justify;
     margin: .8em 1.4em .8em 0em; }
   .productContainer__article p, .articleCard p {
     font-family: "Monserrat", sans-serif;
@@ -87,7 +85,6 @@
     font-weight: 600;
     color: #373a40;
     letter-spacing: .03em;
-    text-align: justify;
     width: auto;
     padding: 1em; }
 
@@ -524,8 +521,7 @@ footer {
     font-style: normal;
     font-weight: 500;
     color: #373a40;
-    letter-spacing: .08em;
-    text-align: justify; }
+    letter-spacing: .08em; }
 
 .presentation__article--backward, .divFundador {
   display: grid;
@@ -713,7 +709,6 @@ footer {
     font-weight: 500;
     color: whitesmoke;
     letter-spacing: .05em;
-    text-align: justify;
     padding-left: 4em;
     padding-right: 4em;
     margin-bottom: 1.5em; }
@@ -761,7 +756,8 @@ footer {
   .productContainer p {
     margin-top: 2em; }
   .productContainer__article {
-    width: 85vw; }
+    width: 85vw;
+    margin: 1em auto; }
   .productContainer__article--wide img {
     width: 85vw; } }
 
