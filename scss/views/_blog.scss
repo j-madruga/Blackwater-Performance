@@ -91,6 +91,11 @@
 }
 // responsive de blog.html hasta 600px 
 @media only screen and (max-width: 600px) {
+    .articleContainer {
+        h3 {
+            font-size: 2rem;
+        }
+    }
     .blogLinkContainer {
         margin: 3%;
         img {

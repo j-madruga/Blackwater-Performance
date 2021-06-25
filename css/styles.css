@@ -287,9 +287,10 @@
     padding-bottom: .5em; }
   .actionCall form, .blogLinkContainer form {
     width: 80vw;
-    margin-bottom: 1.125em; }
+    margin-bottom: 1.25em; }
     .actionCall form input, .blogLinkContainer form input {
       width: 60vw;
+      margin-top: .8em;
       margin-bottom: .5em; } }
 
 .formContainer {
@@ -665,8 +666,7 @@ footer {
     font-weight: 500;
     color: #373a40;
     grid-area: textCard;
-    align-items: center;
-    text-align: justify; }
+    align-items: center; }
 
 .actionCall__form--padding form {
   padding-bottom: 1.85em; }
@@ -866,6 +866,8 @@ footer {
     padding: .5em 0em; } }
 
 @media only screen and (max-width: 600px) {
+  .articleContainer h3 {
+    font-size: 2rem; }
   .blogLinkContainer {
     margin: 3%; }
     .blogLinkContainer img {

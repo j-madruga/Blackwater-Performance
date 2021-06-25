@@ -186,7 +186,7 @@
         }
     }
 }
-// responsive del call to action hasta 800px 
+// responsive del call to action hasta 600px 
 @media only screen and (max-width:600px) {
     .actionCall {
         h4 {
@@ -195,9 +195,10 @@
         }
         form {
             width: 80vw;
-            margin-bottom: 1.125em;
+            margin-bottom: 1.25em;
             input {
                 width: 60vw;
+                margin-top: .8em;
                 margin-bottom: .5em;
             }
         
