@@ -403,13 +403,14 @@ footer {
                 @extend %displayFlexRow;
                 flex: 1;
                 list-style-type: none;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-content: center;
                 align-items: center;
                 padding-left: 9em;
                 img {
                     height: 64px;
                     transition: all 0.5s;
+                    margin-left: 2em;
                 }
                 img:hover {
                     transform: scale(1.2);
@@ -433,12 +434,13 @@ footer {
         .footer__div--flex {
             .footer__div--logo {
                 img {
-                    height: 50px;
+                    height: 40px;
                 }
             }
             .footer__div--links {
                 img {
-                    height: 50px;
+                    height: 40px;
+                    margin-left: 1.25em;
                 }
             }
         }
@@ -456,9 +458,12 @@ footer {
                 padding: 1em;
             }
             .footer__div--links {
+                justify-content: center;
+                margin: 0;
                 padding: 1em;
                 img {
-                    height: 40px;
+                    margin: 0 1em;
+                    height: 35px;
                 }
             }
         }
